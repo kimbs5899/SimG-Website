@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimG</title>
+    <title>(주)심지</title>
     <link rel="stylesheet" href="/WebContent/css/simg.css">
+    <meta name="description" content="(주)심지 시뮬레이터 사이트">
+    <meta name="keywords" content="(주)심지, 시뮬레이터, 교육, 중장비">
+    <link rel="icon" href="/WebContent/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="header-container">
@@ -196,7 +199,7 @@
         <div class="section-title">LATEST NEWS</div>
         <p class="section-subtitle">최신 기술로 산업 안전을 혁신하는 SimG의 소식과 뉴스를 확인하세요.</p>
         <button class="button-arrow" id="news-prev-button"><img src="/WebContent/images/btn-arrow-left.png" alt="Before-News"></button>
-        <div class="new-wrapper">
+        <div class="news-wrapper">
             <ul class="news-carousel">
                 <li class="news-item">
                     <img src="/WebContent/images/news_image.png" alt="News Image 1">
@@ -364,16 +367,95 @@
         const clientNextButton = document.getElementById('client-next-button');
 
         let currentIndex = 0;
-        const visibleItemCount = 4;
+        const visibleNewsItemCount = 4;
+        const visibleClientItemCount = 5;
+        const updateCarousel = () => {
+            const width = window.innerWidth;
+            if (width >= 1400) {
+                visibleNewsItemCount = 4;
+                visibleClientItemCount = 5;
+            } else if (width >= 600) {
+                visibleNewsItemCount = 2;
+                visibleClientItemCount = 3;
+            } else {
+                visibleNewsItemCount = 1;
+                visibleClientItemCount = 1;
+            }
+            
+            const newsItemWidth = newsItems[0].offsetWidth + parseInt(getComputedStyle(newsItems[0]).marginRight);
+            const newsCount = newsItems.length;
+            
+            const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
+            const clientCount = clientItems.length;
 
-        const newsCount = newsItems.length;
-        const newsItemWidth = newsItems[0].offsetWidth + parseInt(getComputedStyle(newsItems[0]).marginRight);
+            newsCarousel.style.width = (newsItemWidth * newsCount) + "px";
+            clientCarousel.style.width = (clientItemWidth * clientCount) + "px";
+            
+            if (currentIndex >= newsCount - visibleNewsItemCount) {
+                currentIndex = Math.max(0, newsCount - visibleNewsItemCount);
+            }
 
-        const clientCount = clientItems.length;
-        const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
+            if (currentIndex >= clientCount - visibleClientItemCount) {
+                currentIndex = Match.max(0, clientCount - visibleClientItemCount);
+            }
 
-        newsCarousel.style.width = (newsItemWidth * newsCount) + "px";
-        clientCarousel.style.width = (clientItemWidth * clientCount) + "px";
+            newsCarousel.style.transform = "translateX(" + -newsItemWidth * currentIndex + "px)";
+            clientCarousel.style.transform = "translateX(" + -clientItemWidth * currentIndex + "px";
+        };
+
+        const gotoNewsSlide = (index) => {
+            const newsItemWidth = newsItems[0].offsetWidth + parseInt(getComputedStyle(newsItems[0]).marginRight);
+            newsCarousel.style.transition = "all 400ms";
+            newsCarousel.style.transform = "translateX(" + -newsItemWidth * index + "px)";
+            currentIndex = index;
+        };
+
+        const gotoClientSlide = (index) => {
+            const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
+            clientCarousel.style.transition = "all 400ms";
+            clientCarousel.style.transform = "translateX(" + -clientItemWidth * index + "px)";
+            currentIndex = index;
+        }
+
+        newsPrevButton.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = Math.max(0, newsItems.length - visibleNewsItemCount);
+            }
+            gotoNewsSlide(currentIndex);
+        });
+
+        newsNextButton.addEventListener("click", () => {
+            if (currentIndex < newsItems.length - visibleNewsItemCount) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            gotoNewsSlide(currentIndex);
+        });
+
+        clientPrevButton.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = Math.max(0, clientItems.length - visibleClientItemCount);
+            }
+            gotoClientSlide(currentIndex);
+        });
+
+        clientNextButton.addEventListener("click", () => {
+            if (currentIndex < clientItems.length - visibleClientItemCount) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            gotoClientSlide(currentIndex);
+        });
+
+        window.addEventListener('resize', updateCarousel);
+
+        updateCarousel();
 
         // Menu Property
         const menuToggleButton = document.getElementById('menu-toggle-button');
@@ -529,57 +611,57 @@
             product.classList.add('active');
         }
 
-        // Slide Menu
-        function gotoNewsSlide(index) {
-            newsCarousel.style.transition = "all 400ms";
-            newsCarousel.style.transform = "translateX(" + -newsItemWidth * index + "px)";
-            currentIndex = index;
-        }
+        // // Slide Menu
+        // function gotoNewsSlide(index) {
+        //     newsCarousel.style.transition = "all 400ms";
+        //     newsCarousel.style.transform = "translateX(" + -newsItemWidth * index + "px)";
+        //     currentIndex = index;
+        // }
 
-        function gotoClientSlide(index) {
-            clientCarousel.style.transition = "all 400ms";
-            clientCarousel.style.transform = "translateX(" + -clientItemWidth * index + "px)";
-            currentIndex = index;
-        }
+        // function gotoClientSlide(index) {
+        //     clientCarousel.style.transition = "all 400ms";
+        //     clientCarousel.style.transform = "translateX(" + -clientItemWidth * index + "px)";
+        //     currentIndex = index;
+        // }
 
-        newsPrevButton.addEventListener("click", () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = Math.max(0, newsCount - visibleItemCount);
-            }
-            gotoNewsSlide(currentIndex);
-        });
+        // newsPrevButton.addEventListener("click", () => {
+        //     if (currentIndex > 0) {
+        //         currentIndex--;
+        //     } else {
+        //         currentIndex = Math.max(0, newsCount - visibleItemCount);
+        //     }
+        //     gotoNewsSlide(currentIndex);
+        // });
 
-        newsNextButton.addEventListener("click", () => {
-            if (currentIndex < newsCount - visibleItemCount) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            gotoNewsSlide(currentIndex);
-        });
+        // newsNextButton.addEventListener("click", () => {
+        //     if (currentIndex < newsCount - visibleItemCount) {
+        //         currentIndex++;
+        //     } else {
+        //         currentIndex = 0;
+        //     }
+        //     gotoNewsSlide(currentIndex);
+        // });
         
-        clientPrevButton.addEventListener("click", () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = Math.max(0, clientCount - visibleItemCount - 1);
-            }
-            gotoClientSlide(currentIndex);
-        });
+        // clientPrevButton.addEventListener("click", () => {
+        //     if (currentIndex > 0) {
+        //         currentIndex--;
+        //     } else {
+        //         currentIndex = Math.max(0, clientCount - visibleItemCount - 1);
+        //     }
+        //     gotoClientSlide(currentIndex);
+        // });
 
-        clientNextButton.addEventListener("click", () => {
-            if (currentIndex < clientCount - visibleItemCount - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            gotoClientSlide(currentIndex);
-        });
+        // clientNextButton.addEventListener("click", () => {
+        //     if (currentIndex < clientCount - visibleItemCount - 1) {
+        //         currentIndex++;
+        //     } else {
+        //         currentIndex = 0;
+        //     }
+        //     gotoClientSlide(currentIndex);
+        // });
 
-        gotoNewsSlide(currentIndex);
-        gotoClientSlide(currentIndex);
+        // gotoNewsSlide(currentIndex);
+        // gotoClientSlide(currentIndex);
     });
     </script>
 </body>
