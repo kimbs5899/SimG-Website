@@ -72,7 +72,7 @@ ul, li {
     .footer-container {
         max-width: 1400px;
         margin: 0 0;
-        padding: 0 40px;
+        padding: 0 60px;
         position: relative;
     }
     
@@ -110,8 +110,8 @@ ul, li {
     }
 
     .close-menu {
-        top: 40px;
-        right: 40px;
+        top: 45px;
+        right: 45px;
         display: block;
         position: absolute;
         background: none;
@@ -119,7 +119,42 @@ ul, li {
         cursor: pointer;
         margin-bottom: 20px;
     }
-    
+
+    .product-list-menu,
+    .heavy-equipment-menu,
+    .safety-training-accident-experience-menu,
+    .manufacturing-menu,
+    .shipbuilding-industry-menu,
+    .culture-tourism-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left:0;
+        width: 400px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: none;
+        flex-direction: column;
+        display: none;
+    }
+
+    .product-list-menu.active,
+    .heavy-equipment-menu.active,
+    .safety-training-accident-experience-menu.active,
+    .manufacturing-menu.active,
+    .shipbuilding-industry-menu.active,
+    .culture-tourism-menu.active {
+        display: flex !important;
+    }
+
+    .product-button {
+        background: none;
+        border-style: none;
+        padding: 0 0;
+        width: 100%;
+        text-align: left;
+    }
+
     .side-nav-menu ul {
         padding-top: 80px;
         flex-direction: column;
@@ -148,48 +183,9 @@ ul, li {
         margin: 15px 40px;
     }
 
-    .product-list-menu {
-        border: 10px solid red;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left:0;
-        width: 400px;
-        height: 100%;
-        background-color: #fff;
-        box-shadow: none;
-        flex-direction: column;
-        display: none;
-    }
-
-    .product-list-menu.active {
-        display: flex !important;
-    }
-
-    .heavy-equipment-menu {
-        display: none;
-    }
-
-    .side-nav-menu .product-list-menu li:last-child {
-        padding: 0 0;
-    }
-
-    .side-nav-menu .product-list-menu li {
-        padding: 0 0;
-    }
-    
-    .side-nav-menu .dropdown-submenu {
-        display: none;
-        flex-direction: column;
-    }
-    
-    .side-nav-menu .dropdown-submenu.active {
-        display: flex;
-    }
-
-    .back-menu {
-        top: 40px;
-        left: 40px;
+    .product-back-button {
+        top: 45px;
+        left: 35px;
         display: block;
         position: absolute;
         background: none;
