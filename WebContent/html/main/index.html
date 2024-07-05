@@ -8,6 +8,7 @@
     <meta name="description" content="(주)심지 시뮬레이터 사이트">
     <meta name="keywords" content="(주)심지, 시뮬레이터, 교육, 중장비">
     <link rel="icon" href="/WebContent/images/favicon.ico" type="image/x-icon">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 <body>
     <header class="header-container">
@@ -290,15 +291,17 @@
     </section>
    
     <section class="contact-container">
-        <div class="contact-info-area">
+        <div class="contact-info">
             <span class="contact-title">Get <span class="contact-title-tangerine">in</span> Touch!</span>
             <div class="contact-subtitle">Connecting the world through immersive virtual reality education since 2013.</div>
-            <iframe
-                width="600"
-                height="450"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=서울특별시+구로구+디지털로30길+31" allowfullscreen>
-            </iframe>
+            <div class="contact-map">
+                <iframe
+                    width="600"
+                    height="450"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=서울특별시+구로구+디지털로30길+31" allowfullscreen>
+                </iframe>
+            </div>
         </div>
         <div class="contact-form">
             <div class="contact-form-title">CONTACT US</div>
@@ -374,7 +377,7 @@
             if (width >= 1400) {
                 visibleNewsItemCount = 4;
                 visibleClientItemCount = 5;
-            } else if (width >= 600) {
+            } else if (width > 600) {
                 visibleNewsItemCount = 2;
                 visibleClientItemCount = 3;
             } else {
@@ -416,46 +419,6 @@
             clientCarousel.style.transform = "translateX(" + -clientItemWidth * index + "px)";
             currentIndex = index;
         }
-
-        newsPrevButton.addEventListener("click", () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = Math.max(0, newsItems.length - visibleNewsItemCount);
-            }
-            gotoNewsSlide(currentIndex);
-        });
-
-        newsNextButton.addEventListener("click", () => {
-            if (currentIndex < newsItems.length - visibleNewsItemCount) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            gotoNewsSlide(currentIndex);
-        });
-
-        clientPrevButton.addEventListener("click", () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = Math.max(0, clientItems.length - visibleClientItemCount);
-            }
-            gotoClientSlide(currentIndex);
-        });
-
-        clientNextButton.addEventListener("click", () => {
-            if (currentIndex < clientItems.length - visibleClientItemCount) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            gotoClientSlide(currentIndex);
-        });
-
-        window.addEventListener('resize', updateCarousel);
-
-        updateCarousel();
 
         // Menu Property
         const menuToggleButton = document.getElementById('menu-toggle-button');
@@ -611,57 +574,46 @@
             product.classList.add('active');
         }
 
-        // // Slide Menu
-        // function gotoNewsSlide(index) {
-        //     newsCarousel.style.transition = "all 400ms";
-        //     newsCarousel.style.transform = "translateX(" + -newsItemWidth * index + "px)";
-        //     currentIndex = index;
-        // }
+        // Slide Functioin
+        newsPrevButton.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = Math.max(0, newsItems.length - visibleNewsItemCount);
+            }
+            gotoNewsSlide(currentIndex);
+        });
 
-        // function gotoClientSlide(index) {
-        //     clientCarousel.style.transition = "all 400ms";
-        //     clientCarousel.style.transform = "translateX(" + -clientItemWidth * index + "px)";
-        //     currentIndex = index;
-        // }
+        newsNextButton.addEventListener("click", () => {
+            if (currentIndex < newsItems.length - visibleNewsItemCount) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            gotoNewsSlide(currentIndex);
+        });
 
-        // newsPrevButton.addEventListener("click", () => {
-        //     if (currentIndex > 0) {
-        //         currentIndex--;
-        //     } else {
-        //         currentIndex = Math.max(0, newsCount - visibleItemCount);
-        //     }
-        //     gotoNewsSlide(currentIndex);
-        // });
+        clientPrevButton.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = Math.max(0, clientItems.length - visibleClientItemCount);
+            }
+            gotoClientSlide(currentIndex);
+        });
 
-        // newsNextButton.addEventListener("click", () => {
-        //     if (currentIndex < newsCount - visibleItemCount) {
-        //         currentIndex++;
-        //     } else {
-        //         currentIndex = 0;
-        //     }
-        //     gotoNewsSlide(currentIndex);
-        // });
-        
-        // clientPrevButton.addEventListener("click", () => {
-        //     if (currentIndex > 0) {
-        //         currentIndex--;
-        //     } else {
-        //         currentIndex = Math.max(0, clientCount - visibleItemCount - 1);
-        //     }
-        //     gotoClientSlide(currentIndex);
-        // });
+        clientNextButton.addEventListener("click", () => {
+            if (currentIndex < clientItems.length - visibleClientItemCount) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            gotoClientSlide(currentIndex);
+        });
 
-        // clientNextButton.addEventListener("click", () => {
-        //     if (currentIndex < clientCount - visibleItemCount - 1) {
-        //         currentIndex++;
-        //     } else {
-        //         currentIndex = 0;
-        //     }
-        //     gotoClientSlide(currentIndex);
-        // });
+        window.addEventListener('resize', updateCarousel);
 
-        // gotoNewsSlide(currentIndex);
-        // gotoClientSlide(currentIndex);
+        updateCarousel();
     });
     </script>
 </body>
