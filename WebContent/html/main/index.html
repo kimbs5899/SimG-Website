@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimG</title>
+    <title>(주)심지</title>
     <link rel="stylesheet" href="/WebContent/css/simg.css">
+    <meta name="description" content="(주)심지 시뮬레이터 사이트">
+    <meta name="keywords" content="(주)심지, 시뮬레이터, 교육, 중장비">
+    <link rel="icon" href="/WebContent/images/favicon.ico" type="image/x-icon">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 <body>
     <header class="header-container">
@@ -88,13 +92,13 @@
                 <ul>
                     <li><a href="#">회사소개</a></li>
                     <li>
-                        <a href="#" class="product-list">제품 ▸</a>
+                        <button class="product-button" id="product-list-button"><a href="#" >제품 ▸</a></button>
                         <ul class="product-list-menu">
-                            <li><button class="product-back-menu" id="product-back-menu-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                            <li><button class="product-back-button" id="product-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
                             <li>
-                                <a href="#" class="heavy-equipment-link">중장비 시뮬레이터 ▸</a>
+                                <button class="product-button" id="heavy-equipment-button"><a href="#">중장비 시뮬레이터 ▸</a></button>
                                 <ul class="heavy-equipment-menu">
-                                    <li><button class="heavy-equipment-back-menu"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                    <li><button class="product-back-button" id="heavy-equipment-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
                                     <li><a href="#">굴착기 시뮬레이터</a></li>
                                     <li><a href="#">지게차 시뮬레이터</a></li>
                                     <li><a href="#">도저 시뮬레이터</a></li>
@@ -105,9 +109,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" onclick="toggleDropdown(event)">안전교육/사고체험 ▸</a>
-                                <ul class="dropdown-submenu">
-                                    <li><button class="back-menu" id="menu-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                <button class="product-button" id="safety-training-accident-experience-button"><a href="#">안전교육/사고체험 ▸</a></button>
+                                <ul class="safety-training-accident-experience-menu">
+                                    <li><button class="product-back-button" id="safety-training-accident-experience-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
                                     <li><a href="#">선박화재 대응 VR</a></li>
                                     <li><a href="#">화학사고 예방 메타버스</a></li>
                                     <li><a href="#">XR 소화기 시뮬레이터</a></li>
@@ -117,9 +121,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" onclick="toggleDropdown(event)">제조업 ▸</a>
-                                <ul class="dropdown-submenu">
-                                    <li><button class="back-menu" id="menu-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                <button class="product-button" id="manufacturing-button"><a href="#">제조업 ▸</a></button>
+                                <ul class="manufacturing-menu">
+                                    <li><button class="product-back-button" id="manufacturing-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
                                     <li><a href="#">자재관리 AR</a></li>
                                     <li><a href="#">배전반 AR</a></li>
                                     <li><a href="#">조립훈련 VR</a></li>
@@ -128,9 +132,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" onclick="toggleDropdown(event)">조선업 ▸</a>
-                                <ul class="dropdown-submenu">
-                                    <li><button class="back-menu" id="menu-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                <button class="product-button" id="shipbuilding-industry-button"><a href="#">조선업 ▸</a></button>
+                                <ul class="shipbuilding-industry-menu">
+                                    <li><button class="product-back-button" id="shipbuilding-industry-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
                                     <li><a href="#">XR 도장 시뮬레이터</a></li>
                                     <li><a href="#">XR 엔진 정비</a></li>
                                     <li><a href="#">엔진 마스터</a></li>
@@ -139,9 +143,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" onclick="toggleDropdown(event)">문화/관광 ▸</a>
-                                <ul class="dropdown-submenu">
-                                    <li><button class="back-menu" id="menu-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                <button class="product-button" id="culture-tourism-button"><a href="#">문화/관광 ▸</a></button>
+                                <ul class="culture-tourism-menu">
+                                    <li><button class="product-back-button" id="culture-tourism-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
                                     <li><a href="#">반구대 AR</a></li>
                                     <li><a href="#">장생포레인저 VR</a></li>
                                     <li><a href="#">개운포 VR</a></li>
@@ -173,7 +177,7 @@
 
     <section class="simulator-container">
         <div class="simulator">
-            <iframe src="https://www.youtube.com/embed/0s0HKv3y2BU?si=TwBcNAuv2BZRMej-&amp;start=33" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/0s0HKv3y2BU?si=_EvKoAiq7MBvcF4r&amp;start=33" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <div class="simulator-info">
                 <p class="simulator-type">중장비 시뮬레이터</p>
                 <h3 class="simulator-title">굴착기 시뮬레이터</h3>
@@ -196,7 +200,7 @@
         <div class="section-title">LATEST NEWS</div>
         <p class="section-subtitle">최신 기술로 산업 안전을 혁신하는 SimG의 소식과 뉴스를 확인하세요.</p>
         <button class="button-arrow" id="news-prev-button"><img src="/WebContent/images/btn-arrow-left.png" alt="Before-News"></button>
-        <div class="new-wrapper">
+        <div class="news-wrapper">
             <ul class="news-carousel">
                 <li class="news-item">
                     <img src="/WebContent/images/news_image.png" alt="News Image 1">
@@ -287,15 +291,17 @@
     </section>
    
     <section class="contact-container">
-        <div class="contact-info-area">
+        <div class="contact-info">
             <span class="contact-title">Get <span class="contact-title-tangerine">in</span> Touch!</span>
             <div class="contact-subtitle">Connecting the world through immersive virtual reality education since 2013.</div>
-            <iframe
-                width="600"
-                height="450"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=서울특별시+구로구+디지털로30길+31" allowfullscreen>
-            </iframe>
+            <div class="contact-map">
+                <iframe
+                    width="600"
+                    height="450"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=서울특별시+구로구+디지털로30길+31" allowfullscreen>
+                </iframe>
+            </div>
         </div>
         <div class="contact-form">
             <div class="contact-form-title">CONTACT US</div>
@@ -350,6 +356,7 @@
     </footer>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
+        // Slide Property
         const newsCarousel = document.querySelector('.news-carousel');
         const newsItems = document.querySelectorAll('.news-item');
 
@@ -362,25 +369,80 @@
         const clientPrevButton = document.getElementById('client-prev-button');
         const clientNextButton = document.getElementById('client-next-button');
 
+        let currentIndex = 0;
+        const visibleNewsItemCount = 4;
+        const visibleClientItemCount = 5;
+        const updateCarousel = () => {
+            const width = window.innerWidth;
+            if (width >= 1400) {
+                visibleNewsItemCount = 4;
+                visibleClientItemCount = 5;
+            } else if (width > 600) {
+                visibleNewsItemCount = 2;
+                visibleClientItemCount = 3;
+            } else {
+                visibleNewsItemCount = 1;
+                visibleClientItemCount = 1;
+            }
+            
+            const newsItemWidth = newsItems[0].offsetWidth + parseInt(getComputedStyle(newsItems[0]).marginRight);
+            const newsCount = newsItems.length;
+            
+            const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
+            const clientCount = clientItems.length;
+
+            newsCarousel.style.width = (newsItemWidth * newsCount) + "px";
+            clientCarousel.style.width = (clientItemWidth * clientCount) + "px";
+            
+            if (currentIndex >= newsCount - visibleNewsItemCount) {
+                currentIndex = Math.max(0, newsCount - visibleNewsItemCount);
+            }
+
+            if (currentIndex >= clientCount - visibleClientItemCount) {
+                currentIndex = Match.max(0, clientCount - visibleClientItemCount);
+            }
+
+            newsCarousel.style.transform = "translateX(" + -newsItemWidth * currentIndex + "px)";
+            clientCarousel.style.transform = "translateX(" + -clientItemWidth * currentIndex + "px";
+        };
+
+        const gotoNewsSlide = (index) => {
+            const newsItemWidth = newsItems[0].offsetWidth + parseInt(getComputedStyle(newsItems[0]).marginRight);
+            newsCarousel.style.transition = "all 400ms";
+            newsCarousel.style.transform = "translateX(" + -newsItemWidth * index + "px)";
+            currentIndex = index;
+        };
+
+        const gotoClientSlide = (index) => {
+            const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
+            clientCarousel.style.transition = "all 400ms";
+            clientCarousel.style.transform = "translateX(" + -clientItemWidth * index + "px)";
+            currentIndex = index;
+        }
+
+        // Menu Property
         const menuToggleButton = document.getElementById('menu-toggle-button');
         const menuCloseButton = document.getElementById('menu-close-button');
-        const menuProductBackButton = document.getElementById('product-back-menu-button');
-        
+        const menuProductButton = document.getElementById('product-list-button');
+        const menuProductBackButton = document.getElementById('product-back-button')
 
+        // Product Property
+        const heavyEquipmentButton = document.getElementById('heavy-equipment-button');
+        const heavyEquipmentBackButton = document.getElementById('heavy-equipment-back-button');
 
+        const safetyTrainingAccidentExperienceButton = document.getElementById('safety-training-accident-experience-button');
+        const safetyTrainingAccidentExperienceBackButton = document.getElementById('safety-training-accident-experience-back-button');
 
-        let currentIndex = 0;
-        const visibleItemCount = 4;
+        const manufacturingButton = document.getElementById('manufacturing-button');
+        const manufacturingBackButton = document.getElementById('manufacturing-back-button');
 
-        const newsCount = newsItems.length;
-        const newsItemWidth = newsItems[0].offsetWidth + parseInt(getComputedStyle(newsItems[0]).marginRight);
+        const shipbuildingIndustryButton = document.getElementById('shipbuilding-industry-button');
+        const shipbuildingIndustryBackButton = document.getElementById('shipbuilding-industry-back-button');
 
-        const clientCount = clientItems.length;
-        const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
+        const cultureTourismButton = document.getElementById('culture-tourism-button');
+        const cultureTourismBackButton = document.getElementById('culture-tourism-back-button');
 
-        newsCarousel.style.width = (newsItemWidth * newsCount) + "px";
-        clientCarousel.style.width = (clientItemWidth * clientCount) + "px";
-
+        // Default Product Menu
         menuToggleButton.addEventListener("click", () => {
             toggleMenu()
         });
@@ -389,18 +451,27 @@
             toggleMenu()
         });
 
-        menuBackButton.addEventListener("click", () => {
-            tapBackMenu()
+        menuProductButton.addEventListener("click", () => {
+            tapProductMenu()
         });
+
+        menuProductBackButton.addEventListener("click", () => {
+            tapProductBack()
+        });
+
+        function tapProductBack() {
+            const productMenu = document.querySelector('.product-list-menu')
+            productMenu.classList.remove('active');
+        }
 
         function tapProductMenu() {
             const productMenu = document.querySelector('.product-list-menu')
-            productMenu.classList.toggle('active')
+            productMenu.classList.add('active');
         }
 
         function tapBackMenu() {
             const backMenuButton = document.querySelector('.product-list-menu');
-            backMenuButton.classList.toggle('active')
+            backMenuButton.classList.toggle('active');
         }
 
         function toggleMenu() {
@@ -408,53 +479,131 @@
             sideNavMenu.classList.toggle('active');
         }
 
+        // Heavy Equipment Menu
+        heavyEquipmentButton.addEventListener("click", () => {
+            tapHeavyEquipmentMenu()
+        });
 
+        heavyEquipmentBackButton.addEventListener("click", () => {
+            tapHeavyEquipmentBack()
+        });
 
-
-
-
-
-        function gotoNewsSlide(index) {
-            newsCarousel.style.transition = "all 400ms";
-            newsCarousel.style.transform = "translateX(" + -newsItemWidth * index + "px)";
-            currentIndex = index;
+        function tapHeavyEquipmentBack() {
+            const product = document.querySelector('.heavy-equipment-menu')
+            product.classList.remove('active');
         }
 
-        function gotoClientSlide(index) {
-            clientCarousel.style.transition = "all 400ms";
-            clientCarousel.style.transform = "translateX(" + -clientItemWidth * index + "px)";
-            currentIndex = index;
+        function tapHeavyEquipmentMenu() {
+            const product = document.querySelector('.heavy-equipment-menu')
+            product.classList.add('active');
         }
 
+        // Safety Training Accident Experience Menu
+        safetyTrainingAccidentExperienceButton.addEventListener("click", () => {
+            tapSafetyTrainingAccidentExperienceMenu()
+        });
+
+        safetyTrainingAccidentExperienceBackButton.addEventListener("click", () => {
+            tapSafetyTrainingAccidentExperienceBack()
+        });
+
+        function tapSafetyTrainingAccidentExperienceBack() {
+            const product = document.querySelector('.safety-training-accident-experience-menu')
+            product.classList.remove('active');
+        }
+
+        function tapSafetyTrainingAccidentExperienceMenu() {
+            const product = document.querySelector('.safety-training-accident-experience-menu')
+            product.classList.add('active');
+        }
+
+        // Manufacturing Menu
+        manufacturingButton.addEventListener("click", () => {
+            tapManufacturingMenu()
+        });
+
+        manufacturingBackButton.addEventListener("click", () => {
+            tapManufacturingBack()
+        });
+
+        function tapManufacturingBack() {
+            const product = document.querySelector('.manufacturing-menu')
+            product.classList.remove('active');
+        }
+
+        function tapManufacturingMenu() {
+            const product = document.querySelector('.manufacturing-menu')
+            product.classList.add('active');
+        }
+
+        // Shipbuilding Industry Menu
+        shipbuildingIndustryButton.addEventListener("click", () => {
+            tapShipbuildingIndustryMenu()
+        });
+
+        shipbuildingIndustryBackButton.addEventListener("click", () => {
+            tapShipbuildingIndustryBack()
+        });
+
+        function tapShipbuildingIndustryBack() {
+            const product = document.querySelector('.shipbuilding-industry-menu')
+            product.classList.remove('active');
+        }
+
+        function tapShipbuildingIndustryMenu() {
+            const product = document.querySelector('.shipbuilding-industry-menu')
+            product.classList.add('active');
+        }
+
+        // Culture Tourism Menu
+        cultureTourismButton.addEventListener("click", () => {
+            tapCultureTourismMenu()
+        });
+
+        cultureTourismBackButton.addEventListener("click", () => {
+            tapCultureTourismBack()
+        });
+
+        function tapCultureTourismBack() {
+            const product = document.querySelector('.culture-tourism-menu')
+            product.classList.remove('active');
+        }
+
+        function tapCultureTourismMenu() {
+            const product = document.querySelector('.culture-tourism-menu')
+            product.classList.add('active');
+        }
+
+        // Slide Functioin
         newsPrevButton.addEventListener("click", () => {
             if (currentIndex > 0) {
                 currentIndex--;
             } else {
-                currentIndex = Math.max(0, newsCount - visibleItemCount);
+                currentIndex = Math.max(0, newsItems.length - visibleNewsItemCount);
             }
             gotoNewsSlide(currentIndex);
         });
 
         newsNextButton.addEventListener("click", () => {
-            if (currentIndex < newsCount - visibleItemCount) {
+            if (currentIndex < newsItems.length - visibleNewsItemCount) {
                 currentIndex++;
             } else {
                 currentIndex = 0;
             }
             gotoNewsSlide(currentIndex);
         });
-        
+
         clientPrevButton.addEventListener("click", () => {
             if (currentIndex > 0) {
                 currentIndex--;
             } else {
-                currentIndex = Math.max(0, clientCount - visibleItemCount - 1);
+                currentIndex = Math.max(0, clientItems.length - visibleClientItemCount);
             }
             gotoClientSlide(currentIndex);
         });
 
         clientNextButton.addEventListener("click", () => {
-            if (currentIndex < clientCount - visibleItemCount - 1) {
+            if (currentIndex < clientItems.length - visibleClientItemCount) {
                 currentIndex++;
             } else {
                 currentIndex = 0;
@@ -462,8 +611,9 @@
             gotoClientSlide(currentIndex);
         });
 
-        gotoNewsSlide(currentIndex);
-        gotoClientSlide(currentIndex);
+        window.addEventListener('resize', updateCarousel);
+
+        updateCarousel();
     });
     </script>
 </body>
