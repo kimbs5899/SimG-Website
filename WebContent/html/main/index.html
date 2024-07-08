@@ -8,7 +8,20 @@
     <meta name="description" content="(주)심지 시뮬레이터 사이트">
     <meta name="keywords" content="(주)심지, 시뮬레이터, 교육, 중장비">
     <link rel="icon" href="/WebContent/images/favicon.ico" type="image/x-icon">
+    
+    <script src="/WebContent/js/jquery-3.4.1.min.js"></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/WebContent/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .error {
+          color: #F65633;
+          position: relative;
+        }
+    
+        input:focus {
+          outline: none;
+        }
+      </style>
 </head>
 <body>
     <header class="header-container">
@@ -291,23 +304,131 @@
     </section>
    
     <section class="contact-container">
+        <div class="row d-flex flex-row">
+            <div class="contact-info mr-auto">
+                <h2 class="contact-title text-left">Get <span class="contact-title-tangerine">in</span> Touch!</h2>
+                <p class="contact-subtitle">Connecting the world through immersive virtual reality education since 2013.</p>
+                <div class="contact-map mb-4">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3166.0536209442416!2d126.89605400000002!3d37.483061!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9e24602d8f19%3A0x26ec77d87e8b96c4!2z7ISc7Jq47Yq567OE7IucIOq1rOuhnOq1rCDrlJTsp4DthLjroZwzMOq4uCAzMQ!5e0!3m2!1sko!2skr!4v1718686577796!5m2!1sko!2skr"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            <div class="contact-form ml-auto">
+                <h3 class="contact-form-title">CONTACT US</h3>
+                <form name="fcontact" method="post" action="/contactus-proAdd" class="p-4">
+                    <div class="form-row justify-content-start">
+                        <div class="form-group col-px-3">
+                            <label for="name">Your Name</label>
+                            <input type="text" class="form-control" id="txtname" name="txtname" placeholder="Enter your name">
+                            <span class="error" id="nameerr"></span>
+                        </div>
+                        <div class="form-group px-5">
+                            <label for="email">Your Email</label>
+                            <input type="email" class="form-control mx-0 id="txtemail" name="txtemail" placeholder="Enter your email">
+                            <span class="error" id="emailerr"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="txtphone" name="txtphone" placeholder="Enter your phone number">
+                            <span class="error" id="phoneerr"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="company">Company Name</label>
+                            <input type="text" class="form-control" id="txtcompany" name="txtcompany" placeholder="Enter your company name">
+                            <span class="error" id="companyerr"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-12">
+                            <label for="txtsubject">Subject</label>
+                            <input type="text" class="form-control" id="txtsubject" name="txtsubject" placeholder="Enter subject">
+                            <span class="error" id="subjecterr"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-12">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="txtmessage" name="txtmessage" rows="4" placeholder="Enter your message"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="check-button">문의하기</button>
+                </form>
+                <a href="#" class="contact-button">문의하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="contact-container">
         <div class="contact-info">
             <span class="contact-title">Get <span class="contact-title-tangerine">in</span> Touch!</span>
             <div class="contact-subtitle">Connecting the world through immersive virtual reality education since 2013.</div>
             <div class="contact-map">
-                <iframe
-                    width="600"
-                    height="450"
-                    frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=서울특별시+구로구+디지털로30길+31" allowfullscreen>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3166.0536209442416!2d126.89605400000002!3d37.483061!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9e24602d8f19%3A0x26ec77d87e8b96c4!2z7ISc7Jq47Yq567OE7IucIOq1rOuhnOq1rCDrlJTsp4DthLjroZwzMOq4uCAzMQ!5e0!3m2!1sko!2skr!4v1718686577796!5m2!1sko!2skr" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </div>
         <div class="contact-form">
             <div class="contact-form-title">CONTACT US</div>
+            <div class="container mt-auto">
+                <form name="fcontact" method="post" action="/contactus-proAdd">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                          <label for="name">Your Name</label>
+                          <input type="text" class="form-control" id="txtname" name="txtname" placeholder="Enter your name">
+                          <span class="error" id="nameerr"> </span>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="email">Your Email</label>
+                          <input type="email" class="form-control" id="txtemail" name="txtemail" placeholder="Enter your email">
+                          <span class="error" id="emailerr"> </span>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="phone">Phone Number</label>
+                          <input type="tel" class="form-control" id="txtphone" name="txtphone" placeholder="Enter your phone number">
+                          <span class="error" id="phoneerr"> </span>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="company">Company Name</label>
+                          <input type="text" class="form-control" id="txtcompany" name="txtcompany"
+                            placeholder="Enter your company name">
+                          <span class="error" id="companyerr"> </span>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="txtsubject">Subject</label>
+                          <input type="text" class="form-control" id="txtsubject" name="txtsubject" placeholder="Enter subject">
+                          <span class="error" id="subjecterr"> </span>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-12">
+                          <label for="message">Message</label>
+                          <textarea class="form-control" id="txtmessage" name="txtmessage" rows="4" placeholder="Enter your message"></textarea>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary" id="check-button">문의하기</button>
+                </form>
+            </div>
             <a href="#" class="contact-button">문의하기</a>
         </div>
-    </section>
+    </section> -->
 
     <footer class="footer-container">
         <div class="footer-sections">
