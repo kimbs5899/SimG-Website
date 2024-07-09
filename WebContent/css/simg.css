@@ -16,8 +16,8 @@ ul, li {
 .news-container,
 .client-container,
 .contact-container,
-.footer-container {
-    /* max-width: 1400px; */
+.footer-container,
+.menu-container {
     margin: 0 auto;
     padding: 0 260px;
     overflow: hidden;
@@ -70,7 +70,8 @@ ul, li {
     .news-container,
     .client-container,
     .contact-container,
-    .footer-container {
+    .footer-container,
+    .menu-container {
         max-width: 1400px;
         margin: 0 0;
         padding: 0 60px;
@@ -82,7 +83,6 @@ ul, li {
     }
 
     .menu-toggle {
-        font-size: 30px;
         background: none;
         border: none;
         cursor: pointer;
@@ -108,6 +108,7 @@ ul, li {
 
     .side-nav-menu.active {
         display: flex !important;
+        z-index: 1100;
     }
 
     .close-menu {
@@ -137,6 +138,7 @@ ul, li {
         box-shadow: none;
         flex-direction: column;
         display: none;
+        z-index: 1200;
     }
 
     .product-list-menu.active,
@@ -157,7 +159,7 @@ ul, li {
     }
 
     .side-nav-menu ul {
-        padding-top: 80px;
+        padding-top: 80px !important;
         flex-direction: column;
         width: 100%;
     }
@@ -312,8 +314,9 @@ ul, li {
     .news-container,
     .client-container,
     .contact-container,
-    .footer-container {
-        max-width: 1020px;
+    .footer-container,
+    .menu-container {
+        max-width: 600px;
         margin: 0 0;
         padding: 0 40px;
         position: relative;
@@ -324,11 +327,117 @@ ul, li {
     }
 
     .menu-toggle {
-        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        display: block !important;
+    }
+    .side-nav-menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        z-index: 1000;
+        box-sizing: border-box;
+        display: none !important;
     }
 
-    .side-nav-menu {
-        display: black;
+    .side-nav-menu.active {
+        display: flex !important;
+        z-index: 1100;
+    }
+
+    .close-menu {
+        top: 45px;
+        right: 45px;
+        display: block;
+        position: absolute;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .product-list-menu,
+    .heavy-equipment-menu,
+    .safety-training-accident-experience-menu,
+    .manufacturing-menu,
+    .shipbuilding-industry-menu,
+    .culture-tourism-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left:0;
+        width: 400px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: none;
+        flex-direction: column;
+        display: none;
+        z-index: 1200;
+    }
+
+    .product-list-menu.active,
+    .heavy-equipment-menu.active,
+    .safety-training-accident-experience-menu.active,
+    .manufacturing-menu.active,
+    .shipbuilding-industry-menu.active,
+    .culture-tourism-menu.active {
+        display: flex !important;
+    }
+
+    .product-button {
+        background: none;
+        border-style: none;
+        padding: 0 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .side-nav-menu ul {
+        padding-top: 80px !important;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .side-nav-menu ul li {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .side-nav-menu ul li a {
+        padding: 15px 40px;
+        font-size: 18px;
+        display: block;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .side-nav-menu ul li a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .side-nav-menu .business-button {
+        color: #fff;
+        margin: 15px 40px;
+    }
+
+    .product-back-button {
+        top: 45px;
+        left: 35px;
+        display: block;
+        position: absolute;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 20px;
     }
 
     .header-container {
@@ -336,30 +445,43 @@ ul, li {
     }
 
     .logo {
-        width: 170px !important;
-        height: 40px !important;
+        width: 160px !important;
+        height: 36px !important;
     }
 
     .main-first-title,
     .main-container .main-background h1 {
-        font-size: 46px !important;
+        font-size: 36px !important;
     }
 
     .main-background p {
         top: 50px !important;
+        font-size: 18px !important;
+    }
+
+    .cta-button {
+        font-size: 16px !important;
     }
 
     .menu-detail-button {
-        right: 20px !important;
+        text-align: center;
+        margin-top: 28px !important;
+        position:static !important;
     }
 
     .simulator-container {
         display: block !important;
         padding: 0 40px;
     }
+
     .simulator {
         width: 100% !important;
         margin-bottom: 40px;
+        position: relative;
+    }
+
+    .simulator iframe {
+        height: 60% !important;
     }
 
     .section-title,
@@ -429,7 +551,7 @@ ul, li {
     }
 
     .footer-container {
-        height: 750px !important;
+        height: 800px !important;
     }
 
     .footer-sections {
@@ -476,7 +598,6 @@ ul, li {
     }
 }
 
-
 .menu-background {
     display: fixed;
 }
@@ -493,6 +614,8 @@ ul, li {
     padding-top: 30px;
     height: 300px;
     background: #fff;
+    z-index: 1000 !important;
+    overflow: visible !important;
 }
 
 .logo {
@@ -518,6 +641,7 @@ ul, li {
 nav {
     float: right;
     position: relative;
+    /* z-index: 1000 !important; */
 }
 
 nav ul {
@@ -525,33 +649,33 @@ nav ul {
 }
 
 nav a {
-    text-decoration: none;
+    display: block;
+    position: relative;
+    text-decoration: none !important;
     font-weight: 500;
     padding: 17px 15px;
     font-size: 20px;
     color: #000;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
 nav ul li:hover .dropdown,
 nav ul li:focus-within .dropdown,
 .dropdown:hover {
     display: block;
+    position: absolute;
+    padding: 0 0;
+    margin: 0 0;
+    top: 60px;
+    left: 100px;
+    z-index: 1020 !important;
 }
 
 .dropdown {
     display: none;
     position: absolute;
-    padding: 0 0;
-    margin: 0 0;
-    top: 40px;
-    left: 100px;
     background: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 1200 !important;
 }
 
 .dropdown li {
@@ -559,6 +683,7 @@ nav ul li:focus-within .dropdown,
     margin: 0 0;
     white-space: nowrap;
     display: block;
+    position: relative;
 }
 
 .dropdown li:last-child {
@@ -573,14 +698,17 @@ nav ul li:focus-within .dropdown,
     display: block;
     margin: 0 0;
     padding: 10px;
+    position: relative;
 }
 
 .dropdown li a:hover {
     color: #25AAE2;
     background-color: #f1f1f1;
+    position: relative;
 }
 .dropdown li:hover .dropdown-submenu {
     display: block;
+    z-index: 1300 !important;
 }
 
 .dropdown-submenu {
@@ -590,7 +718,7 @@ nav ul li:focus-within .dropdown,
     left: 100%;
     background: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 1300 !important;
 }
 
 .dropdown-submenu {
@@ -630,14 +758,24 @@ nav ul li:focus-within .dropdown,
     font-size: 20px;
     font-weight: 500;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: #25AAE2;
+}
+
+.business-button:hover {
+    background-color: #105a7a;
+    color: #fff;
 }
 
 .main-container {
     background: url('/WebContent/images/img_title_backgroundForBusiness.png') no-repeat center center;
+    background-size: cover;
+}
+
+.menu-container {
+    height: 300px;
+    background: url('/WebContent/images/img_title_backgroundMenu.png') no-repeat center center;
     background-size: cover;
 }
 
@@ -648,6 +786,7 @@ nav ul li:focus-within .dropdown,
     width: 100%;
     height: 360px;
     position: relative;
+    z-index: 1 !important;
 }
 
 .main-background h1 {
