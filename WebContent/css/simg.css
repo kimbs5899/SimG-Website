@@ -1340,6 +1340,7 @@ nav ul li:focus-within .dropdown,
 .milestones-container {
     background-color: #f5f5f5;
     padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .milestones-list {
@@ -1382,6 +1383,10 @@ nav ul li:focus-within .dropdown,
     font-size: 16px;
     color: #000;
 }
+
 .milestones-item-contents li {
-    list-style: circle;
+    margin: 0 30px;
+    font-size: 16px;
+    list-style: inside;
+    text-indent: -22px;
 }
