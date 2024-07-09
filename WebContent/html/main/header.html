@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)심지</title>
+    <link rel="stylesheet" href="/WebContent/css/simg.css">
+    <meta name="description" content="(주)심지 시뮬레이터 사이트">
+    <meta name="keywords" content="(주)심지, 시뮬레이터, 교육, 중장비">
+    <link rel="icon" href="/WebContent/images/favicon.ico" type="image/x-icon">
+    <script src="/WebContent/js/jquery-3.4.1.min.js"></script>
+    <link href="/WebContent/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header-container">
+        <a href="../main/index.html">
+            <img src="/WebContent/images/SimGLoco_Korean_Basic.png" alt="SimG Logo" class="logo">
+        </a>
+        <button class="menu-toggle" id="menu-toggle-button">
+            <img src="/WebContent/images/btn-menuToggle.png">
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../main/about-us.html">회사소개</a></li>
+                <li>
+                    <a href="#">제품 ▸</a>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#">중장비 시뮬레이터 ▸</a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#">굴착기 시뮬레이터</a></li>
+                                <li><a href="#">지게차 시뮬레이터</a></li>
+                                <li><a href="#">도저 시뮬레이터</a></li>
+                                <li><a href="#">로더 시뮬레이터</a></li>
+                                <li><a href="#">그레이더 시뮬레이터</a></li>
+                                <li><a href="#">크레인 시뮬레이터</a></li>
+                                <li><a href="#">트랜스포터 시뮬레이터</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">안전교육/사고체험 ▸</a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#">선박화재 대응 VR</a></li>
+                                <li><a href="#">화학사고 예방 메타버스</a></li>
+                                <li><a href="#">XR 소화기 시뮬레이터</a></li>
+                                <li><a href="#">지게차 사고체험</a></li>
+                                <li><a href="#">산업안전 VR 콘텐츠</a></li>
+                                <li><a href="#">유해화학물질 누출사고체험119</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">제조업 ▸</a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#">자재관리 AR</a></li>
+                                <li><a href="#">배전반 AR</a></li>
+                                <li><a href="#">조립훈련 VR</a></li>
+                                <li><a href="#">설계검증 VR</a></li>
+                                <li><a href="#">원자력 VR</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">조선업 ▸</a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#">XR 도장 시뮬레이터</a></li>
+                                <li><a href="#">XR 엔진 정비</a></li>
+                                <li><a href="#">엔진 마스터</a></li>
+                                <li><a href="#">엔진 센서 Safety test AR 콘텐츠</a></li>
+                                <li><a href="#">변압기 조립 VR</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">문화/관광 ▸</a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#">반구대 AR</a></li>
+                                <li><a href="#">장생포레인저 VR</a></li>
+                                <li><a href="#">개운포 VR</a></li>
+                                <li><a href="#">반구대암각화 메타버스</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">수상 및 이력</a></li>
+                <li><a href="#">클라이언트 / 협력사</a></li>
+                <li>
+                    <a href="#" class="business-button">비즈니스
+                    <img src="/WebContent/images/right_top_arrow.png" class="header-arrow">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+            <nav class="side-nav-menu">
+                <button class="close-menu" id="menu-close-button">
+                    <img src="/WebContent/images/btn-menuClose.png">
+                </button>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li>
+                        <button class="product-button" id="product-list-button"><a href="#" >제품 ▸</a></button>
+                        <ul class="product-list-menu">
+                            <li><button class="product-back-button" id="product-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                            <li>
+                                <button class="product-button" id="heavy-equipment-button"><a href="#">중장비 시뮬레이터 ▸</a></button>
+                                <ul class="heavy-equipment-menu">
+                                    <li><button class="product-back-button" id="heavy-equipment-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                    <li><a href="#">굴착기 시뮬레이터</a></li>
+                                    <li><a href="#">지게차 시뮬레이터</a></li>
+                                    <li><a href="#">도저 시뮬레이터</a></li>
+                                    <li><a href="#">로더 시뮬레이터</a></li>
+                                    <li><a href="#">그레이더 시뮬레이터</a></li>
+                                    <li><a href="#">크레인 시뮬레이터</a></li>
+                                    <li><a href="#">트랜스포터 시뮬레이터</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="product-button" id="safety-training-accident-experience-button"><a href="#">안전교육/사고체험 ▸</a></button>
+                                <ul class="safety-training-accident-experience-menu">
+                                    <li><button class="product-back-button" id="safety-training-accident-experience-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                    <li><a href="#">선박화재 대응 VR</a></li>
+                                    <li><a href="#">화학사고 예방 메타버스</a></li>
+                                    <li><a href="#">XR 소화기 시뮬레이터</a></li>
+                                    <li><a href="#">지게차 사고체험</a></li>
+                                    <li><a href="#">산업안전 VR 콘텐츠</a></li>
+                                    <li><a href="#">유해화학물질 누출사고체험119</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="product-button" id="manufacturing-button"><a href="#">제조업 ▸</a></button>
+                                <ul class="manufacturing-menu">
+                                    <li><button class="product-back-button" id="manufacturing-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                    <li><a href="#">자재관리 AR</a></li>
+                                    <li><a href="#">배전반 AR</a></li>
+                                    <li><a href="#">조립훈련 VR</a></li>
+                                    <li><a href="#">설계검증 VR</a></li>
+                                    <li><a href="#">원자력 VR</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="product-button" id="shipbuilding-industry-button"><a href="#">조선업 ▸</a></button>
+                                <ul class="shipbuilding-industry-menu">
+                                    <li><button class="product-back-button" id="shipbuilding-industry-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                    <li><a href="#">XR 도장 시뮬레이터</a></li>
+                                    <li><a href="#">XR 엔진 정비</a></li>
+                                    <li><a href="#">엔진 마스터</a></li>
+                                    <li><a href="#">엔진 센서 Safety test AR 콘텐츠</a></li>
+                                    <li><a href="#">변압기 조립 VR</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button class="product-button" id="culture-tourism-button"><a href="#">문화/관광 ▸</a></button>
+                                <ul class="culture-tourism-menu">
+                                    <li><button class="product-back-button" id="culture-tourism-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                    <li><a href="#">반구대 AR</a></li>
+                                    <li><a href="#">장생포레인저 VR</a></li>
+                                    <li><a href="#">개운포 VR</a></li>
+                                    <li><a href="#">반구대암각화 메타버스</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">뉴스</a></li>
+                    <li><a href="#">수상 및 이력</a></li>
+                    <li><a href="#">클라이언트 / 협력사</a></li>
+                    <li>
+                        <a href="#" class="business-button">비즈니스
+                        <img src="/WebContent/images/right_top_arrow.png" class="header-arrow">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        <span class="main-first-title">미래를 <span class="main-first-title-tangerine">선도</span>하는 혁신적인</span>
+    </header>
+    <section class="main-container">
+        <div class="main-background">
+            <h1>중장비 훈련 VR 콘텐츠 제작</h1>
+            <p>최신 VR 기술로 실제 중장비 운전과 동일한 훈련 효과를 경험하세요.</p>
+            <a href="#" class="cta-button">자세히보기</a>
+        </div>
+    </section>
+    <script>    
+        document.addEventListener('DOMContentLoaded', function () {
+            // Slide Property
+            const newsCarousel = document.querySelector('.news-carousel');
+            const newsItems = document.querySelectorAll('.news-item');
+    
+            const clientCarousel = document.querySelector('.client-carousel');
+            const clientItems = document.querySelectorAll('.client-logo');
+    
+            const newsPrevButton = document.getElementById('news-prev-button');
+            const newsNextButton = document.getElementById('news-next-button');
+    
+            const clientPrevButton = document.getElementById('client-prev-button');
+            const clientNextButton = document.getElementById('client-next-button');
+    
+            let currentIndex = 0;
+            const visibleNewsItemCount = 4;
+            const visibleClientItemCount = 5;
+            const updateCarousel = () => {
+                const width = window.innerWidth;
+                if (width >= 1400) {
+                    visibleNewsItemCount = 4;
+                    visibleClientItemCount = 5;
+                } else if (width > 600) {
+                    visibleNewsItemCount = 2;
+                    visibleClientItemCount = 3;
+                } else {
+                    visibleNewsItemCount = 1;
+                    visibleClientItemCount = 1;
+                }
+                
+                const newsItemWidth = newsItems[0].offsetWidth + parseInt(getComputedStyle(newsItems[0]).marginRight);
+                const newsCount = newsItems.length;
+                
+                const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
+                const clientCount = clientItems.length;
+    
+                newsCarousel.style.width = (newsItemWidth * newsCount) + "px";
+                clientCarousel.style.width = (clientItemWidth * clientCount) + "px";
+                
+                if (currentIndex >= newsCount - visibleNewsItemCount) {
+                    currentIndex = Math.max(0, newsCount - visibleNewsItemCount);
+                }
+    
+                if (currentIndex >= clientCount - visibleClientItemCount) {
+                    currentIndex = Match.max(0, clientCount - visibleClientItemCount);
+                }
+    
+                newsCarousel.style.transform = "translateX(" + -newsItemWidth * currentIndex + "px)";
+                clientCarousel.style.transform = "translateX(" + -clientItemWidth * currentIndex + "px";
+            };
+    
+            const gotoNewsSlide = (index) => {
+                const newsItemWidth = newsItems[0].offsetWidth + parseInt(getComputedStyle(newsItems[0]).marginRight);
+                newsCarousel.style.transition = "all 400ms";
+                newsCarousel.style.transform = "translateX(" + -newsItemWidth * index + "px)";
+                currentIndex = index;
+            };
+    
+            const gotoClientSlide = (index) => {
+                const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
+                clientCarousel.style.transition = "all 400ms";
+                clientCarousel.style.transform = "translateX(" + -clientItemWidth * index + "px)";
+                currentIndex = index;
+            }
+    
+            // Menu Property
+            const menuToggleButton = document.getElementById('menu-toggle-button');
+            const menuCloseButton = document.getElementById('menu-close-button');
+            const menuProductButton = document.getElementById('product-list-button');
+            const menuProductBackButton = document.getElementById('product-back-button')
+    
+            // Product Property
+            const heavyEquipmentButton = document.getElementById('heavy-equipment-button');
+            const heavyEquipmentBackButton = document.getElementById('heavy-equipment-back-button');
+    
+            const safetyTrainingAccidentExperienceButton = document.getElementById('safety-training-accident-experience-button');
+            const safetyTrainingAccidentExperienceBackButton = document.getElementById('safety-training-accident-experience-back-button');
+    
+            const manufacturingButton = document.getElementById('manufacturing-button');
+            const manufacturingBackButton = document.getElementById('manufacturing-back-button');
+    
+            const shipbuildingIndustryButton = document.getElementById('shipbuilding-industry-button');
+            const shipbuildingIndustryBackButton = document.getElementById('shipbuilding-industry-back-button');
+    
+            const cultureTourismButton = document.getElementById('culture-tourism-button');
+            const cultureTourismBackButton = document.getElementById('culture-tourism-back-button');
+    
+            // Default Product Menu
+            menuToggleButton.addEventListener("click", () => {
+                toggleMenu()
+            });
+    
+            menuCloseButton.addEventListener("click", () => {
+                toggleMenu()
+            });
+    
+            menuProductButton.addEventListener("click", () => {
+                tapProductMenu()
+            });
+    
+            menuProductBackButton.addEventListener("click", () => {
+                tapProductBack()
+            });
+    
+            function tapProductBack() {
+                const productMenu = document.querySelector('.product-list-menu')
+                productMenu.classList.remove('active');
+            }
+    
+            function tapProductMenu() {
+                const productMenu = document.querySelector('.product-list-menu')
+                productMenu.classList.add('active');
+            }
+    
+            function tapBackMenu() {
+                const backMenuButton = document.querySelector('.product-list-menu');
+                backMenuButton.classList.toggle('active');
+            }
+    
+            function toggleMenu() {
+                const sideNavMenu = document.querySelector('.side-nav-menu');
+                sideNavMenu.classList.toggle('active');
+            }
+    
+            // Heavy Equipment Menu
+            heavyEquipmentButton.addEventListener("click", () => {
+                tapHeavyEquipmentMenu()
+            });
+    
+            heavyEquipmentBackButton.addEventListener("click", () => {
+                tapHeavyEquipmentBack()
+            });
+    
+            function tapHeavyEquipmentBack() {
+                const product = document.querySelector('.heavy-equipment-menu')
+                product.classList.remove('active');
+            }
+    
+            function tapHeavyEquipmentMenu() {
+                const product = document.querySelector('.heavy-equipment-menu')
+                product.classList.add('active');
+            }
+    
+            // Safety Training Accident Experience Menu
+            safetyTrainingAccidentExperienceButton.addEventListener("click", () => {
+                tapSafetyTrainingAccidentExperienceMenu()
+            });
+    
+            safetyTrainingAccidentExperienceBackButton.addEventListener("click", () => {
+                tapSafetyTrainingAccidentExperienceBack()
+            });
+    
+            function tapSafetyTrainingAccidentExperienceBack() {
+                const product = document.querySelector('.safety-training-accident-experience-menu')
+                product.classList.remove('active');
+            }
+    
+            function tapSafetyTrainingAccidentExperienceMenu() {
+                const product = document.querySelector('.safety-training-accident-experience-menu')
+                product.classList.add('active');
+            }
+    
+            // Manufacturing Menu
+            manufacturingButton.addEventListener("click", () => {
+                tapManufacturingMenu()
+            });
+    
+            manufacturingBackButton.addEventListener("click", () => {
+                tapManufacturingBack()
+            });
+    
+            function tapManufacturingBack() {
+                const product = document.querySelector('.manufacturing-menu')
+                product.classList.remove('active');
+            }
+    
+            function tapManufacturingMenu() {
+                const product = document.querySelector('.manufacturing-menu')
+                product.classList.add('active');
+            }
+    
+            // Shipbuilding Industry Menu
+            shipbuildingIndustryButton.addEventListener("click", () => {
+                tapShipbuildingIndustryMenu()
+            });
+    
+            shipbuildingIndustryBackButton.addEventListener("click", () => {
+                tapShipbuildingIndustryBack()
+            });
+    
+            function tapShipbuildingIndustryBack() {
+                const product = document.querySelector('.shipbuilding-industry-menu')
+                product.classList.remove('active');
+            }
+    
+            function tapShipbuildingIndustryMenu() {
+                const product = document.querySelector('.shipbuilding-industry-menu')
+                product.classList.add('active');
+            }
+    
+            // Culture Tourism Menu
+            cultureTourismButton.addEventListener("click", () => {
+                tapCultureTourismMenu()
+            });
+    
+            cultureTourismBackButton.addEventListener("click", () => {
+                tapCultureTourismBack()
+            });
+    
+            function tapCultureTourismBack() {
+                const product = document.querySelector('.culture-tourism-menu')
+                product.classList.remove('active');
+            }
+    
+            function tapCultureTourismMenu() {
+                const product = document.querySelector('.culture-tourism-menu')
+                product.classList.add('active');
+            }
+    
+            // Slide Functioin
+            newsPrevButton.addEventListener("click", () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = Math.max(0, newsItems.length - visibleNewsItemCount);
+                }
+                gotoNewsSlide(currentIndex);
+            });
+    
+            newsNextButton.addEventListener("click", () => {
+                if (currentIndex < newsItems.length - visibleNewsItemCount) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                gotoNewsSlide(currentIndex);
+            });
+    
+            clientPrevButton.addEventListener("click", () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = Math.max(0, clientItems.length - visibleClientItemCount);
+                }
+                gotoClientSlide(currentIndex);
+            });
+    
+            clientNextButton.addEventListener("click", () => {
+                if (currentIndex < clientItems.length - visibleClientItemCount) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                gotoClientSlide(currentIndex);
+            });
+    
+            window.addEventListener('resize', updateCarousel);
+    
+            updateCarousel();
+        });
+        </script>
+</body>
