@@ -17,7 +17,9 @@ ul, li {
 .client-container,
 .contact-container,
 .footer-container,
-.menu-container {
+.menu-container,
+.about-us-container,
+.milestones-container {
     margin: 0 auto;
     padding: 0 260px;
     overflow: hidden;
@@ -71,7 +73,9 @@ ul, li {
     .client-container,
     .contact-container,
     .footer-container,
-    .menu-container {
+    .menu-container,
+    .about-us-container,
+    .milestones-container {
         max-width: 1400px;
         margin: 0 0;
         padding: 0 60px;
@@ -315,7 +319,9 @@ ul, li {
     .client-container,
     .contact-container,
     .footer-container,
-    .menu-container {
+    .menu-container,
+    .about-us-container,
+    .milestones-container {
         max-width: 600px;
         margin: 0 0;
         padding: 0 40px;
@@ -641,7 +647,6 @@ ul, li {
 nav {
     float: right;
     position: relative;
-    /* z-index: 1000 !important; */
 }
 
 nav ul {
@@ -1113,10 +1118,6 @@ nav ul li:focus-within .dropdown,
     margin-bottom: 40px;
 }
 
-/* .contact-content {
-    width: 50%;
-} */
-
 .contact-map {
     width: 100%;
     max-width: 680px;
@@ -1301,4 +1302,86 @@ nav ul li:focus-within .dropdown,
     color: #999;
     top:20px;
     left: 50%;
+}
+
+/* About Us */
+.about-us-logo {
+    width: 320px;
+    height: 80px;
+    background-color: #fff;
+    padding: 0 20px;
+    margin-bottom: -40px;
+}
+
+.about-us-container {
+    overflow: visible;
+    margin: 60px 0;
+    text-align: center;
+    align-items: center;
+}
+
+.about-us-info {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.about-us-title {
+    padding-top: 80px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.about-us-message {
+    padding: 0 60px 40px 60px;
+    font-size: 20px;
+    color: #141A37;
+    white-space: pre-line
+}
+
+.milestones-container {
+    background-color: #f5f5f5;
+    padding-top: 60px;
+}
+
+.milestones-list {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.milestones-item {
+    background: #fff;
+    width: calc(30% - 10px);
+    border-top: 4px solid #2D6BB3;
+    margin: 0 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.milestones-item:first-child {
+    border-top: 4px solid #000;
+    margin: 0 0;
+}
+
+.milestones-item:last-child {
+    border-top: 4px solid #FF601A;
+    margin: 0 0;
+}
+
+.milestones-item-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.milestones-item-sub-title {
+    font-size: 18px;
+    color: #8C8C8C;
+}
+
+.milestones-item-contents {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #000;
+}
+.milestones-item-contents li {
+    list-style: circle;
 }
