@@ -31,7 +31,7 @@ ul, li {
     position: relative;
 }
 
-@media screen and (min-width: 610px) and (max-width: 1600px) {
+@media screen and (min-width: 710px) and (max-width: 1600px) {
     .container,
     .header-container,
     .main-container,
@@ -241,19 +241,17 @@ ul, li {
         transform: translateX(-30%);
     }
 
-    .footer-container {
-        height: 400px !important;
+    .footer-sections {
+        justify-content: flex-start !important;
     }
 
-    .footer-info-section0,
-    .footer-info-section1 {
-        width: 30%;
+    .footer-container {
+        height: 440px !important;
     }
-    .footer-info-section2 {
-        position: absolute;
-        top: 160px;
-        left: calc(40% + 26px);
-        width: 100% !important;
+
+    .footer-info-detail-section {
+        justify-content: space-around;
+        flex-direction: column;
     }
 
     .privacy {
@@ -261,7 +259,7 @@ ul, li {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .container,
     .header-container,
     .main-container,
@@ -283,6 +281,10 @@ ul, li {
         margin: 0 0;
         padding: 0 40px;
         position: relative;
+    }
+
+    .top-bar-info {
+        font-size: 9pt !important;
     }
 
     .nav-menu {
@@ -408,9 +410,9 @@ ul, li {
         height: 36px !important;
     }
 
-    .main-first-title,
+    .main-title,
     .main-container .main-background h1 {
-        font-size: 36px !important;
+        font-size: 30px !important;
     }
 
     .main-background p {
@@ -478,17 +480,21 @@ ul, li {
     }
 
     #client-prev-button {
-        top: 200px !important;
+        top: 250px !important;
         left: 40px !important;
     }
 
     #client-next-button {
-        top: 200px !important;
+        top: 250px !important;
         right: 40px !important;
     }
 
     .contact-container {
         display: block;
+    }
+    .contact-product-item,
+    .contact-partner-item {
+        margin: 10px 0 !important;
     }
 
     .contact-info {
@@ -511,14 +517,14 @@ ul, li {
     }
 
     .footer-container {
-        height: 800px !important;
+        height: 790px !important;
     }
 
     .footer-sections {
         display: block !important;
     }
 
-    .footer-info-section0 {
+    .footer-info-section {
         width: 100% !important;
         text-align: center;
     }
@@ -535,15 +541,21 @@ ul, li {
         justify-content: center;
     }
 
-    .footer-info-section1,
-    .footer-info-section2 {
+    .footer-info-detail-section {
+        width: 100% !important;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .footer-info-detail-section1,
+    .footer-info-detail-section1 {
         width: 100% !important;
         position: none !important;
         margin-left: 0 !important;
     }
 
     .footer-bottom {
-        height: 100px !important;
+        height: 140px !important;
     }
 
     .privacy {
@@ -552,8 +564,12 @@ ul, li {
     }
 
     .copyright {
-        top: 60px !important;
+        /* top: 60px !important; */
         bottom: 20px !important;
+    }
+
+    .flagList {
+        padding-top: 40px;
     }
 }
 
@@ -833,7 +849,7 @@ ul, li {
 
 .menu-container {
     height: 300px;
-    background: url('/WebContent/images/img_title_backgroundMenu.png') no-repeat center center;
+    background: url('/WebContent/images/img-title-backgroundMenu.png') no-repeat center center;
     background-size: cover;
 }
 
@@ -1227,8 +1243,9 @@ ul, li {
 }
 
 input:focus {
-outline: none;
+    utline: none;
 }
+
 #external-content {
     display: block;
     border: 1px solid red;
@@ -1246,21 +1263,25 @@ outline: none;
     justify-content: space-around;
 }
 
-.footer-info-section0 {
+.footer-info-section {
     padding-top: 30px;
-    width: 24%;
-}
-
-.footer-info-section1 {
-    padding-top: 40px;
-    width: 20%;
-    margin-left: 40px;
-}
-
-.footer-info-section2 {
-    padding-top: 40px;
     width: 30%;
-    margin-left: 10px;
+}
+
+.footer-info-detail-section {
+    width: 70%;
+    display: flex;
+    justify-content:space-around
+}
+
+.footer-info-detail-section1 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.footer-info-detail-section2 {
+    padding-top: 40px;
+    padding-left: 20px;
 }
 
 .footer-logo {
@@ -1312,15 +1333,15 @@ outline: none;
     color: #fff;
 }
 
-.footer-info-section1 p,
-.footer-info-section2 p {
+.footer-info-detail-section1 p,
+.footer-info-detail-section2 p {
     margin: 5px 0;
     font-size: 16px;
     color: #999999;
 }
 
 .footer-bottom {
-    height: 50px;
+    height: 70px;
     width: 100%;
     text-align: left;
     border: 1px solid #444;
@@ -1349,8 +1370,22 @@ outline: none;
     position: absolute;
     transform: translateX(-50%);
     color: #999;
-    top:20px;
+    top:4-0px;
     left: 50%;
+}
+
+.flagList {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.flagList img {
+    align-content: center;
+    height: 16px;
+    padding-top: 16px !important;
+    margin-bottom: 10px !important;
 }
 
 /* About Us */
