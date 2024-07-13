@@ -12,29 +12,47 @@
     <link href="/WebContent/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header-container">
-        <a href="../main/index.html">
-            <img src="/WebContent/images/SimGLoco_Korean_Basic.png" alt="SimG Logo" class="logo">
-        </a>
-        <button class="menu-toggle" id="menu-toggle-button">
-            <img src="/WebContent/images/btn-menuToggle.png">
-        </button>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="../main/about-us.html">회사소개</a></li>
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="top-bar-info">
+                    <img src="images/icon-call.png" alt="Phone Icon"> 052-221-3001/3007
+                </div>
+                <div class="top-bar-info">
+                    <img src="images/icon-email.png" alt="Email Icon"> simg@simglab.com
+                </div>
+                <div class="social-buttons">
+                    <a href="https://www.youtube.com/channel/UCztDxh3P5Edx2fH6R11lHJA">
+                        <img src="images/Youtube_icon.png" alt="YouTube">
+                    </a>
+                    <a href="https://blog.naver.com/simgxr">
+                        <img src="images/Blog_icon.png" alt="KakaoTalk">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/SimGLoco_Korean_Basic.png" alt="SimG Logo" class="logo">
+            </a>
+            <button class="menu-toggle" id="menu-toggle-button">
+                <img src="images/btn-menuToggle.png">
+            </button>
+            <ul class="nav-menu">
+                <li><a href="about-us.html">회사소개</a></li>
                 <li>
                     <a href="#">제품 ▸</a>
                     <ul class="dropdown">
                         <li>
                             <a href="#">중장비 시뮬레이터 ▸</a>
                             <ul class="dropdown-submenu">
-                                <li><a href="#">굴착기 시뮬레이터</a></li>
-                                <li><a href="#">지게차 시뮬레이터</a></li>
-                                <li><a href="#">도저 시뮬레이터</a></li>
-                                <li><a href="#">로더 시뮬레이터</a></li>
-                                <li><a href="#">그레이더 시뮬레이터</a></li>
-                                <li><a href="#">크레인 시뮬레이터</a></li>
-                                <li><a href="#">트랜스포터 시뮬레이터</a></li>
+                                <li><a href="product.html">굴착기 시뮬레이터</a></li>
+                                <li><a href="product.html">지게차 시뮬레이터</a></li>
+                                <li><a href="product.html">도저 시뮬레이터</a></li>
+                                <li><a href="product.html">로더 시뮬레이터</a></li>
+                                <li><a href="product.html">그레이더 시뮬레이터</a></li>
+                                <li><a href="product.html">크레인 시뮬레이터</a></li>
+                                <li><a href="product.html">트랜스포터 시뮬레이터</a></li>
                             </ul>
                         </li>
                         <li>
@@ -79,158 +97,148 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">뉴스</a></li>
-                <li><a href="#">수상 및 이력</a></li>
-                <li><a href="#">클라이언트 / 협력사</a></li>
-                <li>
-                    <a href="#" class="business-button">비즈니스
-                    <img src="/WebContent/images/right_top_arrow.png" class="header-arrow">
+                <li><a href="latest-news.html">뉴스</a></li>
+                <li><a href="award-certificate.html">수상 / 이력</a></li>
+                <li><a href="our-clients.html">클라이언트 / 협력사</a></li>
+                <li class="nav-business-area">
+                    <a href="business.html" class="business-button">비즈니스
+                    <img src="images/right_top_arrow.png" class="header-arrow">
                     </a>
                 </li>
             </ul>
-        </nav>
-        <nav class="side-nav-menu">
-                <button class="close-menu" id="menu-close-button">
-                    <img src="/WebContent/images/btn-menuClose.png">
-                </button>
-                <ul>
-                    <li><a href="#">회사소개</a></li>
-                    <li>
-                        <button class="product-button" id="product-list-button"><a href="#" >제품 ▸</a></button>
-                        <ul class="product-list-menu">
-                            <li><button class="product-back-button" id="product-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
-                            <li>
-                                <button class="product-button" id="heavy-equipment-button"><a href="#">중장비 시뮬레이터 ▸</a></button>
-                                <ul class="heavy-equipment-menu">
-                                    <li><button class="product-back-button" id="heavy-equipment-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
-                                    <li><a href="#">굴착기 시뮬레이터</a></li>
-                                    <li><a href="#">지게차 시뮬레이터</a></li>
-                                    <li><a href="#">도저 시뮬레이터</a></li>
-                                    <li><a href="#">로더 시뮬레이터</a></li>
-                                    <li><a href="#">그레이더 시뮬레이터</a></li>
-                                    <li><a href="#">크레인 시뮬레이터</a></li>
-                                    <li><a href="#">트랜스포터 시뮬레이터</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <button class="product-button" id="safety-training-accident-experience-button"><a href="#">안전교육/사고체험 ▸</a></button>
-                                <ul class="safety-training-accident-experience-menu">
-                                    <li><button class="product-back-button" id="safety-training-accident-experience-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
-                                    <li><a href="#">선박화재 대응 VR</a></li>
-                                    <li><a href="#">화학사고 예방 메타버스</a></li>
-                                    <li><a href="#">XR 소화기 시뮬레이터</a></li>
-                                    <li><a href="#">지게차 사고체험</a></li>
-                                    <li><a href="#">산업안전 VR 콘텐츠</a></li>
-                                    <li><a href="#">유해화학물질 누출사고체험119</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <button class="product-button" id="manufacturing-button"><a href="#">제조업 ▸</a></button>
-                                <ul class="manufacturing-menu">
-                                    <li><button class="product-back-button" id="manufacturing-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
-                                    <li><a href="#">자재관리 AR</a></li>
-                                    <li><a href="#">배전반 AR</a></li>
-                                    <li><a href="#">조립훈련 VR</a></li>
-                                    <li><a href="#">설계검증 VR</a></li>
-                                    <li><a href="#">원자력 VR</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <button class="product-button" id="shipbuilding-industry-button"><a href="#">조선업 ▸</a></button>
-                                <ul class="shipbuilding-industry-menu">
-                                    <li><button class="product-back-button" id="shipbuilding-industry-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
-                                    <li><a href="#">XR 도장 시뮬레이터</a></li>
-                                    <li><a href="#">XR 엔진 정비</a></li>
-                                    <li><a href="#">엔진 마스터</a></li>
-                                    <li><a href="#">엔진 센서 Safety test AR 콘텐츠</a></li>
-                                    <li><a href="#">변압기 조립 VR</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <button class="product-button" id="culture-tourism-button"><a href="#">문화/관광 ▸</a></button>
-                                <ul class="culture-tourism-menu">
-                                    <li><button class="product-back-button" id="culture-tourism-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
-                                    <li><a href="#">반구대 AR</a></li>
-                                    <li><a href="#">장생포레인저 VR</a></li>
-                                    <li><a href="#">개운포 VR</a></li>
-                                    <li><a href="#">반구대암각화 메타버스</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#">뉴스</a></li>
-                    <li><a href="#">수상 및 이력</a></li>
-                    <li><a href="#">클라이언트 / 협력사</a></li>
-                    <li>
-                        <a href="#" class="business-button">비즈니스
-                        <img src="/WebContent/images/right_top_arrow.png" class="header-arrow">
-                        </a>
-                    </li>
-                </ul>
-        </nav>
-        <span class="main-first-title">수상 및 이력</span>
-    </header>
-    <section class="menu-container">
-        <div class="main-background">
-            <h1>주요 수상 내역 및 경력 개요</h1>
-            <p class="main-background-message">
-                저희는 끊임없는 노력과 혁신을 통해 여러 분야에서 인정받아 왔습니다. 
-                우리의 성공적인 여정을 확인해보세요.
-            </p>
+            <nav class="side-nav-menu">
+                    <button class="close-menu" id="menu-close-button">
+                        <img src="images/btn-menuClose.png">
+                    </button>
+                    <ul>
+                        <li><a href="about-us.html">회사소개</a></li>
+                        <li>
+                            <button class="product-button" id="product-list-button"><a href="#" >제품 ▸</a></button>
+                            <ul class="product-list-menu">
+                                <li><button class="product-back-button" id="product-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                <li>
+                                    <button class="product-button" id="heavy-equipment-button"><a href="#">중장비 시뮬레이터 ▸</a></button>
+                                    <ul class="heavy-equipment-menu">
+                                        <li><button class="product-back-button" id="heavy-equipment-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                        <li><a href="product.html">지게차 시뮬레이터</a></li>
+                                        <li><a href="product.html">굴착기 시뮬레이터</a></li>
+                                        <li><a href="product.html">도저 시뮬레이터</a></li>
+                                        <li><a href="product.html">로더 시뮬레이터</a></li>
+                                        <li><a href="product.html">그레이더 시뮬레이터</a></li>
+                                        <li><a href="product.html">크레인 시뮬레이터</a></li>
+                                        <li><a href="product.html">트랜스포터 시뮬레이터</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="product-button" id="safety-training-accident-experience-button"><a href="#">안전교육/사고체험 ▸</a></button>
+                                    <ul class="safety-training-accident-experience-menu">
+                                        <li><button class="product-back-button" id="safety-training-accident-experience-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                        <li><a href="#">선박화재 대응 VR</a></li>
+                                        <li><a href="#">화학사고 예방 메타버스</a></li>
+                                        <li><a href="#">XR 소화기 시뮬레이터</a></li>
+                                        <li><a href="#">지게차 사고체험</a></li>
+                                        <li><a href="#">산업안전 VR 콘텐츠</a></li>
+                                        <li><a href="#">유해화학물질 누출사고체험119</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="product-button" id="manufacturing-button"><a href="#">제조업 ▸</a></button>
+                                    <ul class="manufacturing-menu">
+                                        <li><button class="product-back-button" id="manufacturing-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                        <li><a href="#">자재관리 AR</a></li>
+                                        <li><a href="#">배전반 AR</a></li>
+                                        <li><a href="#">조립훈련 VR</a></li>
+                                        <li><a href="#">설계검증 VR</a></li>
+                                        <li><a href="#">원자력 VR</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="product-button" id="shipbuilding-industry-button"><a href="#">조선업 ▸</a></button>
+                                    <ul class="shipbuilding-industry-menu">
+                                        <li><button class="product-back-button" id="shipbuilding-industry-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                        <li><a href="#">XR 도장 시뮬레이터</a></li>
+                                        <li><a href="#">XR 엔진 정비</a></li>
+                                        <li><a href="#">엔진 마스터</a></li>
+                                        <li><a href="#">엔진 센서 Safety test AR 콘텐츠</a></li>
+                                        <li><a href="#">변압기 조립 VR</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="product-button" id="culture-tourism-button"><a href="#">문화/관광 ▸</a></button>
+                                    <ul class="culture-tourism-menu">
+                                        <li><button class="product-back-button" id="culture-tourism-back-button"><img src="/WebContent/images/btn-menuBack.png"></button></li>
+                                        <li><a href="#">반구대 AR</a></li>
+                                        <li><a href="#">장생포레인저 VR</a></li>
+                                        <li><a href="#">개운포 VR</a></li>
+                                        <li><a href="#">반구대암각화 메타버스</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="latest-news.html">뉴스</a></li>
+                        <li><a href="award-certificate.html">수상 / 이력</a></li>
+                        <li><a href="our-clients.html">클라이언트 / 협력사</a></li>
+                        <li>
+                            <a href="business.html" class="business-button">비즈니스
+                            <img src="images/right_top_arrow.png" class="header-arrow">
+                            </a>
+                        </li>
+                    </ul>
+            </nav>
         </div>
-    </section>
-
+    </header>
+    <div class="menu-tag"><a class="index-tag" href="index.html">홈</a> > <a class="aboutUs-tag"  href="#">수상 및 이력</a></div>
     <section class="award-certificate-container">
         <table class="award-certificate-list">
             <tr>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
                 </td>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
                 </td>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
                 </td>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
                 </td>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
-                </td>
-            </tr>
-            <tr>
-                <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
-                </td>
-                <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
-                </td>
-                <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
-                </td>
-                <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
-                </td>
-                <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
                 </td>
             </tr>
             <tr>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
                 </td>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
                 </td>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
                 </td>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
                 </td>
                 <td class="award-certificate-item">
-                    <img src="/WebContent/images/award-certificate_1.png">
+                    <img src="images/award-certificate_1.png">
+                </td>
+            </tr>
+            <tr>
+                <td class="award-certificate-item">
+                    <img src="images/award-certificate_1.png">
+                </td>
+                <td class="award-certificate-item">
+                    <img src="images/award-certificate_1.png">
+                </td>
+                <td class="award-certificate-item">
+                    <img src="images/award-certificate_1.png">
+                </td>
+                <td class="award-certificate-item">
+                    <img src="images/award-certificate_1.png">
+                </td>
+                <td class="award-certificate-item">
+                    <img src="images/award-certificate_1.png">
                 </td>
             </tr>
         </table>
@@ -258,7 +266,7 @@
     <div id="simg-templete-footer"></div>
     <script>
     $(document).ready(function(){
-        $("#simg-templete-footer").load("../main//footer.html");
+        $("#simg-templete-footer").load("footer.html");
     });
     document.addEventListener('DOMContentLoaded', function () {
         // Menu Property
