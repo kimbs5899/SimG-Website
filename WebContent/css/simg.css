@@ -62,11 +62,25 @@ ul, li {
     .business-container,
     .product-container,
     .top-bar-container,
-    .contact-menu-container {
+    .contact-menu-container,
+    .menu-tag {
         max-width: 1400px;
         margin: 0 0;
         padding: 0 60px;
         position: relative;
+    }
+
+    .row {
+        flex-direction: column !important;
+    }
+
+    .col iframe {
+        height: 400px;
+        padding-bottom: 60px;
+    }
+
+    .menu-tag {
+        top: 40px !important;
     }
 
     .nav-menu {
@@ -271,6 +285,53 @@ ul, li {
     .privacy {
         left: 60px !important;
     }
+
+    #paging li {
+        display: none !important;
+    }
+
+    #paging li:first-child,
+    #paging li:nth-child(2),
+    #paging li:last-child,
+    #paging li:nth-last-child(2) {
+        display: inline-block !important; /* 기본적으로 맨 처음, 이전, 맨 마지막, 다음 항목은 항상 표시 */
+    }
+
+    #paging li:nth-child(-n+7) {
+        display: inline-block !important;
+    }
+
+    /* About Us */
+
+    .milestones-list {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .milestones-item {
+        width: auto !important;
+        margin: 20px 0 !important;
+    }
+
+    /* Our Clients */
+
+    .our-clients-list {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    /* Award Certificate */
+
+    .award-certificate-list {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    /* Business */
+
+    .contact-partner-item,
+    .contact-product-item {
+        width: auto !important;
+        margin: 20px 0 !important;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -291,11 +352,25 @@ ul, li {
     .business-container,
     .product-container,
     .top-bar-container,
-    .contact-menu-container {
+    .contact-menu-container,
+    .menu-tag {
         max-width: 600px;
         margin: 0 0;
         padding: 0 40px;
         position: relative;
+    }
+
+    .menu-tag {
+        top: 40px !important;
+    }
+
+    .row {
+        flex-direction: column !important;
+    }
+
+    .col iframe {
+        height: 400px;
+        padding-bottom: 60px;
     }
 
     .top-bar-info {
@@ -579,12 +654,80 @@ ul, li {
     }
 
     .copyright {
-        /* top: 60px !important; */
         bottom: 20px !important;
     }
 
     .flagList {
         padding-top: 40px;
+    }
+
+    #paging li {
+        display: none !important;
+    }
+
+    #paging li:first-child,
+    #paging li:nth-child(2),
+    #paging li:last-child,
+    #paging li:nth-last-child(2) {
+        display: inline-block !important; /* 기본적으로 맨 처음, 이전, 맨 마지막, 다음 항목은 항상 표시 */
+    }
+
+    #paging li:nth-child(-n+5) {
+        display: inline-block !important;
+    }
+
+    /* About Us */
+
+    .milestones-list {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .milestones-item {
+        width: auto !important;
+        margin: 20px 0 !important;
+    }
+
+    /* News */
+    
+    .latest-news-item {
+        flex-direction: column;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        margin-bottom: 40px !important;
+    }
+
+    .latest-news-item img {
+        width: 100% !important;
+    }
+
+    .latest-news-info {
+        padding: 20px;
+    }
+    
+    /* Our Clients */
+
+    .our-clients-list {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Award Certificate */
+
+    .award-certificate-list {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Business */
+
+    .col {
+        width: auto !important;
+    }
+
+    /* Business */
+    
+    .contact-partner-item,
+    .contact-product-item {
+        width: auto !important;
+        margin: 20px 0 !important;
     }
 }
 
@@ -1183,7 +1326,7 @@ ul, li {
     padding: 40px 40px !important;
 }
 .contact-product-item {
-    width: 50% !important;
+    width: 50%;
     margin-left: 20px;
     border-top: 4px solid var(--simgBlue);
     background-color: var(--white);
@@ -1524,9 +1667,24 @@ input:focus {
     text-align: center;
 }
 
+#paging li:nth-child(-n+12) {
+    display: inline-block;
+}
+
 #paging li {
     display: inline;
     margin: 0 3px;
+}
+
+#paging li {
+    display: none; /* 기본적으로 모든 항목을 숨깁니다 */
+}
+
+#paging li:first-child,
+#paging li:nth-child(2),
+#paging li:last-child,
+#paging li:nth-last-child(2) {
+    display: inline-block; /* 기본적으로 맨 처음, 이전, 맨 마지막, 다음 항목은 항상 표시 */
 }
 
 #paging li a {
@@ -1563,6 +1721,9 @@ input:focus {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .award-certificate-item {
@@ -1598,6 +1759,9 @@ input:focus {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .our-clients-item {
@@ -1617,6 +1781,33 @@ input:focus {
 .our-clients-item img:hover {
     transform: scale(1.1);
 }
+
+
+/* .our-clients-list {
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.our-clients-item {
+    padding: 20px;
+    text-align: center;
+}
+
+.our-clients-item img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.our-clients-item img:hover {
+    transform: scale(1.1);
+} */
 
 .business-container {
     padding-top: 60px;
