@@ -290,7 +290,13 @@
     <div id="simg-templete-footer"></div>
     <script>
     $(document).ready(function(){
-        $("#simg-templete-footer").load("./footer.html");
+        $("#simg-templete-footer").load("./footer.html", function(response, status, xhr) {
+            if (status == "error") {
+                console.log("Error: " + xhr.status + ": " + xhr.statusText);
+            } else {
+                console.log("Footer loaded successfully.");
+            }
+        });
     });
     document.addEventListener('DOMContentLoaded', function () {
         // Menu Property
