@@ -351,6 +351,10 @@ ul, li {
         flex-direction: column !important;
     }
 
+    .partnership-page-message {
+        padding-right: 0 !important;
+    }
+
     .partnership-products-list {
         grid-template-columns: repeat(2, 1fr) !important;
     }
@@ -788,6 +792,10 @@ ul, li {
     .partnership-page-container {
         align-items: flex-start !important;
         flex-direction: column !important;
+    }
+
+    .partnership-page-message {
+        padding-right: 0 !important;
     }
 
     .partnership-products-list {
@@ -1977,6 +1985,7 @@ input:focus {
 
 .partnership-page-message {
     padding-bottom: 60px;
+    padding-right: 155px;
     font-size: 18px;
     color: #141A37;
     text-align: left;
@@ -1984,6 +1993,7 @@ input:focus {
 }
 
 .partnership-page-image {
+    width: 100%;
     border-radius: 10px;
     display: block;
     align-content: center;
