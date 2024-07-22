@@ -33,8 +33,6 @@ ul, li {
 .product-info-container,
 .product-reference-container,
 .latest-news-detail-container {
-.partnership-process-container,
-.partnership-faq-container {
     margin: 0 auto;
     padding: 0 260px;
     overflow: hidden;
