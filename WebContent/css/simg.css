@@ -1989,21 +1989,23 @@ input:focus {
 /* Products Page */
 
 .product-container {
-    padding-top: 60px;
+    padding-top: 80px;
     padding-bottom: 60px;
 }
 
 .product-list {
-    width: 100%;
-    display:flex;
+    display:grid;
+    gap: 30px;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .product-item {
-    margin: 0 20px;
     border: 1px solid red;
     display: block;
     border: 1px solid rgb(228, 228, 228);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .product-item:first-child {
@@ -2015,11 +2017,13 @@ input:focus {
 }
 
 .product-item-title {
+    text-align: left;
     padding: 20px 20px 0 20px;
     font-size: 24px;
     font-weight: bold;
 }
 .product-item-sub-title {
+    text-align: left;
     padding: 0 20px 20px 20px;
     font-size: 16px;
     color: #FF601A;
@@ -2031,7 +2035,112 @@ input:focus {
 }
 
 .product-item img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.product-item.basic {
+    border-top: 4px solid var(--gray300)
+}
+
+.product-item.hmd {
+    border-top: 4px solid var(--black)
+}
+
+.product-item.multi-monitor {
+    border-top: 4px solid var(--simgTangerine)
+}
+
+.product-item.desk {
+    border-top: 4px solid var(--simgBlue)
+}
+
+.product-info-container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    background-color: var(--gray100);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.product-info-item {
+    background-color: var(--white);
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.product-info-item:first-child {
+    border-top: 4px solid var(--simgTangerine);
+}
+
+.product-info-item:last-child {
+    border-top: 4px solid var(--simgBlue);
+}
+
+.product-info-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--gray100);
+    margin-bottom: 40px;
+}
+
+.product-info-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.product-info-top-message,
+.product-info-bottom-message {
+    font-size: 16px;
+    color: var(--gray700);
+    white-space: pre-line;
+}
+
+.product-info-top-message {
+    padding-top: 20px;
+    height: 60px;
+}
+
+
+.product-reference-container {
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.product-reference-content {
+    border-top: 2px solid var(--black);
+    padding: 40px 0;
+    border-bottom: 2px solid var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.product-reference-info {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.product-reference-media {
+    width: 50%;
+}
+
+.product-reference-info-message {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    font-size: 16px;
+    color: var(--gray700);
+}
+
+.product-reference-info-button {
+    width: 300px;
+    height: 60px;
+    border: none;
+    background: linear-gradient(to right, #25aae2, #2d5fab);
+    color: var(--white);
+    font-size: 20px;
 }
 
 /* Business Page */
