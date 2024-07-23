@@ -191,89 +191,74 @@
     </header>
     <div class="menu-tag"><a class="index-tag" href="./index.html">홈</a> > <a class="aboutUs-tag"  href="#">중장비 시뮬레이터</a> > <a class="aboutUs-tag"  href="#">굴삭기 시뮬레이터</a></div></div> 
     <section class="product-container">
-        <div class="product-list">
-            <div class="product-item basic">
-                <img src="/WebContent/images/img-excavatorSimulator-basic.jpg">
-                <div class="product-item-title">기본형</div>
-                <div class="product-item-sub-title">굴착기 시뮬레이터</div>
+        <div class="product-page">
+            <div class="product-image-area">
+                <img id="modelImage" src="./images/img-excavatorSimulator-basic.jpg">
             </div>
-            <div class="product-item hmd">
-                <img src="/WebContent/images/img-excavatorSimulator-hmd.jpg">
-                <div class="product-item-title">HMD</div>
-                <div class="product-item-sub-title">굴착기 시뮬레이터</div>
-            </div>
-            <div class="product-item multi-monitor">
-                <img src="/WebContent/images/img-excavatorSimulator-multiMonitor.jpg">
-                <div class="product-item-title">멀티모니터</div>
-                <div class="product-item-sub-title">굴착기 시뮬레이터</div>
-            </div>
-            <div class="product-item desk">
-                <img src="/WebContent/images/img-excavatorSimulator-desk.jpg">
-                <div class="product-item-title">책상형</div>
-                <div class="product-item-sub-title">굴착기 시뮬레이터</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="product-info-container">
-        <div class="product-info-item">
-            <div class="product-top-content">
-                <div class="product-info-title">안전</div>
-                <div class="product-info-top-message">안전한 환경에서 사전 교육이 가능 (사고 발생률 0%)</div>
-            </div>
-            <div class="product-info-line"></div>
-            <div class="product-top-content">
-                <div class="product-info-title">에듀테크</div>
-                <div class="product-info-bottom-message">
-                    한국에서 교육부장관상을 수상하였습니다. 
-                    시뮬레이션 교육 이후 면허 실기시험 합격률 약 28% 상승하였습니다.
+            <div class="product-info-area">
+                <div class="product-info-title">굴착기 시뮬레이터</div>
+                <div class="product-info-model">
+                    <div class="product-info-model-title">Models</div>
+                    <div class="product-info-model-list">
+                        <div class="product-info-model-item active" data-model="basic">
+                            <div class="product-info-model-item-title">기본형</div>
+                            <div class="product-info-model-item-subTitle">VR-Basic</div> 
+                        </div>
+                        <div class="product-info-model-item" data-model="hmd">
+                            <div class="product-info-model-item-title">HMD</div>
+                            <div class="product-info-model-item-subTitle">VR-HMD</div> 
+                        </div>
+                        <div class="product-info-model-item" data-model="multi-monitor">
+                            <div class="product-info-model-item-title">멀티모니터</div>
+                            <div class="product-info-model-item-subTitle">VR-Multi-monitor</div> 
+                        </div>
+                        <div class="product-info-model-item" data-model="desk">
+                            <div class="product-info-model-item-title">책상형</div>
+                            <div class="product-info-model-item-subTitle">VR-Desk</div> 
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="product-info-item">
-            <div class="product-top-content">
-                <div class="product-info-title">지속가능한 모델</div>
-                <div class="product-info-top-message">탄소배출 없는 친환경적인 제품으로, 주차비, 유류비, 부품 손실 등의 문제 없이 운영 가능합니다. </div>
-            </div>
-            <div class="product-info-line"></div>
-            <div class="product-top-content">
-                <div class="product-info-title">다양한 모델</div>
-                <div class="product-info-bottom-message">
-                    기본형, HMD, 멀티모니터, 책상형 네 가지로 모델이 나눠져있습니다. 
-                    ㆍ 기본형 : 한 대의 화면, 크기가 작음
-                    ㆍ HMD : 헤드셋 착용, 실감나는 현장감
-                    ㆍ 멀티모니터 : 4대의 대형 모니터
-                    ㆍ 책상형 : 책상과 일체화된 상품
+                <div class="product-info-feature">
+                    <div class="product-info-feature">
+                        <div class="product-info-feature-title">Features</div>
+                        <ul class="product-info-feature-contents">
+                            <li>탄소배출 없는 친환경적인 제품으로, 주차비, 유류비, 부품 손실 등의 문제 없이 운영 가능합니다.</li>
+                            <li>안전한 환경에서 사전 교육이 가능 (사고 발생률 0%)</li>
+                            <li>한국에서 교육부장관상을 수상하였습니다.</li>
+                            <li>시뮬레이션 교육 이후 면허 실기시험 합격률 약 28% 상승하였습니다.</li>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="product-info-reference">
+                    <button class="product-info-reference-button" id="popupButton">기업 사례 보기</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="product-reference-container">
-        <div class="product-reference-content">
-            <div class="product-reference-info">
-                <img src="./images/img-product-reference-logo.jpg">
-                <div class="product-reference-info-message">
-                    볼보 220E 굴삭기 모델을 가상현실 속에서 실제 입력 디바이스와 연동하여 조작할 수 있도록 개발하였습니다. 
-                    실제 장비의 물리값이 반영되어 현실에 가까운 퍼포먼스가 가능합니다. 
-                    3축 모션액츄에이터 적용, 운전석 회전 기능 등이 구현되어있습니다.
+    <div id="popup" class="popup">
+        <div class="popup-blur"></div>
+        <div class="popup-container">
+            <span class="close">
+                <img src="./images/btn-popupClose.png" class="colorize">
+            </span>
+            <div class="popup-content">
+                <img class="popup-image" src="./images/img-product-reference-volvo.jpg">
+                <div class="popup-info">
+                    <img src="./images/img-product-reference-logo.jpg">
+                    <div>
+                        볼보 220E 굴삭기 모델을 가상현실 환경에서 실제 입력 디바이스와 연동하여 조작할 수 있도록 개발하였습니다. 
+                        
+                        이 시스템은 실제 장비의 물리적 특성과 성능을 가상현실 속에 그대로 반영하여, 사용자가 현실과 거의 동일한 퍼포먼스를 경험할 수 있게 합니다.
+                        
+                        이러한 고급 기능들은 볼보 220E 굴삭기 모델의 가상현실 시뮬레이터를 업계 최고의 훈련 도구로 자리매김하게 합니다.
+                    </div>
+                    <button id="inquiryButton">문의하기</button>
                 </div>
-                <button class="product-reference-info-button">문의하기</button>
-            </div>
-            <div class="product-reference-media">
-                <iframe 
-                    width="100%"
-                    height="400px"
-                    src="https://www.youtube.com/embed/0s0HKv3y2BU?si=_EvKoAiq7MBvcF4r&amp;start=84" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-                </iframe>
             </div>
         </div>
-    </section>
+
+    </div>
 
     <div id="simg-templete-footer"></div>
     <script>
@@ -287,7 +272,7 @@
         const menuProductButton = document.getElementById('product-list-button');
         const menuProductBackButton = document.getElementById('product-back-button')
 
-        // Product Property
+        // Menu Product Property
         const heavyEquipmentButton = document.getElementById('heavy-equipment-button');
         const heavyEquipmentBackButton = document.getElementById('heavy-equipment-back-button');
 
@@ -302,6 +287,58 @@
 
         const cultureTourismButton = document.getElementById('culture-tourism-button');
         const cultureTourismBackButton = document.getElementById('culture-tourism-back-button');
+
+        // Product Subpage Property
+        const items = document.querySelectorAll('.product-info-model-item');
+        const modelImage = document.getElementById('modelImage');
+
+        const images = {
+            basic: './images/img-excavatorSimulator-basic.jpg',
+            hmd: './images/img-excavatorSimulator-hmd.jpg',
+            'multi-monitor': './images/img-excavatorSimulator-multiMonitor.jpg',
+            desk: './images/img-excavatorSimulator-desk.jpg'
+        };
+
+        const initialActiveItem = document.querySelector('.product-info-model-item.active');
+        const initialModel = initialActiveItem.getAttribute('data-model');
+
+        modelImage.src = images[initialModel];
+
+        const popupButton = document.getElementById('popupButton');
+        const popup = document.getElementById('popup');
+        const close = document.querySelector('.close');
+        const popupBlur = document.querySelector('.popup-blur');
+
+
+        popupButton.addEventListener('click', function () {
+            popup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closePopup = function () {
+            popup.style.display = 'none';
+            document.body.style.overflow = '';
+        };
+
+        close.addEventListener('click', closePopup);
+        popupBlur.addEventListener('click', closePopup);
+
+        window.addEventListener('click', function (event) {
+            if (event.target == popup) {
+                closePopup();
+            }
+        });
+
+
+        // Product Subpage Method
+        items.forEach(item => {
+            item.addEventListener('click', function () {
+                items.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                const model = this.getAttribute('data-model');
+                modelImage.src = images[model];
+            });
+        });
 
         // Default Product Menu
         menuToggleButton.addEventListener("click", () => {
