@@ -2010,7 +2010,7 @@ input:focus {
 .product-info-model-title,
 .product-info-feature-title {
     padding-left: 10px;
-    padding-top: 40px;
+    /* padding-top: 40px; */
     padding-bottom: 10px;
     text-align: left;
     font-size: 26px;
@@ -2153,7 +2153,8 @@ input:focus {
 }
 
 #inquiryButton {
-    margin-top: 40px;
+   position: relative;
+   top: 40px;
     padding: 10px 60px;
     font-size: 16px;
     cursor: pointer;
@@ -2173,7 +2174,7 @@ input:focus {
 /* Partnership Page */
 
 .partnership-page-container {
-    max-width: 1400px;
+    /* max-width: 1400px; */
     overflow: visible;
     text-align: center;
     align-items: center;
@@ -2198,7 +2199,7 @@ input:focus {
 }
 
 .partnership-page-image {
-    width: 100%;
+    width: 100% !important;
     border-radius: 10px;
     display: block;
     align-content: center;
@@ -2222,12 +2223,16 @@ input:focus {
 }
 
 .partnership-products-item {
+    width: 100%;
+    height: 440px;
     text-align: left;
     background-color: var(--white);
     border: 1px solid var(--gray200);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
+.partnership-products-item img{
+    width: 100%;
+}
 .partnership-products-item-type {
     padding-top: 30px;
     padding-left: 30px;
