@@ -12,18 +12,16 @@
   --simgNavy: #192771;
   --simgDeepNavy: #141A37;
 
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
+  --simgOpacity10: 0.1;
+  --simgOpacity20: 0.2;
+  --simgOpacity40: 0.4;
+  --simgOpacity60: 0.6;
+  --simgOpacity80: 0.8;
 
+  --red: #dc3545;
   --white: #fff;
+  --black: #000000;
+
   --gray100: #f5f5f5;
   --gray200: #CCCCCC;
   --gray300: #B3B3B3;
@@ -33,18 +31,7 @@
   --gray700: #4D4D4D;
   --gray800: #333333;
   --gray900: #1A1A1A;
-  --black: #000000;
 
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #25AAE2;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -53,12 +40,6 @@
   --font-family-sans-serif: "NotoSansKR", "NotoSans", "NotoSansJP", "NotoSansSC", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-
-/* *,
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
 
 html {
   font-family: sans-serif;
@@ -76,7 +57,6 @@ body {
   font-family: var(--font-family-sans-serif);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
   color: #212529;
   text-align: left;
   background-color: #fff;
@@ -94,12 +74,10 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
 }
 
 abbr[title],
@@ -122,7 +100,8 @@ address {
 ol,
 ul,
 dl {
-  margin-top: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ol ol,
@@ -130,6 +109,7 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
+  list-style: none;
 }
 
 dt {
@@ -170,13 +150,13 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #000;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #000;
   text-decoration: underline;
 }
 
