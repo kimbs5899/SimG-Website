@@ -96,6 +96,10 @@
 
 /* Simg design colors */
 
+.simg-page-bg {
+    background-color: rgba(230, 230, 230, var(--simgOpacity40));
+}
+
 .simg-black {
     color: var(--black);
 }
@@ -118,10 +122,6 @@
 
 .simg-bg-gray100 {
     background-color: var(--gray100);
-}
-
-.simg-page-bg {
-    background-color: rgba(230, 230, 230, var(--simgOpacity40));
 }
 
 .simg-gray200 {
