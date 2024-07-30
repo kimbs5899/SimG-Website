@@ -33,11 +33,11 @@
     position: absolute;
     top: 150px;
     z-index: 100;
-    color: var(--gray500);
 }
 
-.menu-tag a {
-    color: var(--gray500);
+.menu-tag a:hover {
+    text-decoration: none;
+    color: var(--gray700);
 }
 
 .side-nav-menu {
@@ -1567,21 +1567,15 @@ input:focus {
 
 .about-us-title {
     padding-top: 70px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left;
 }
 
 .about-us-message {
+    padding-right: 40px;
     padding-bottom: 60px;
-    font-size: 18px;
-    color: #141A37;
-    text-align: left;
     white-space: pre-line;
 }
 
 .milestones-container {
-    background-color: #f5f5f5;
     padding-bottom: 100px;
 }
 
@@ -1591,51 +1585,38 @@ input:focus {
 }
 
 .milestones-item {
-    background: #fff;
     width: calc(30% - 10px);
-    border-top: 4px solid #2D6BB3;
+    border-top: 4px solid var(--simgBlue);
     margin: 0 40px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     padding: 40px;
 }
 
 .milestones-item:first-child {
-    border-top: 4px solid #000;
+    border-top: 4px solid var(--black);
     margin: 0 0;
 }
 
 .milestones-item:last-child {
-    border-top: 4px solid #FF601A;
+    border-top: 4px solid var(--simgTangerine);
     margin: 0 0;
-}
-
-.milestones-item-title {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.milestones-item-sub-title {
-    font-size: 18px;
-    color: #8C8C8C;
 }
 
 .milestones-item-contents {
     margin-top: 30px;
     font-size: 16px;
-    color: #000;
 }
 
 .milestones-item-contents li {
-    margin: 0 30px;
-    font-size: 16px;
     list-style: inside;
-    text-indent: -22px;
+    text-align: left; 
+    padding-bottom: 4px;
 }
 
 /* News Page */
 
 .latest-news-container {
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 20px;
 }
 
@@ -1659,18 +1640,6 @@ input:focus {
     padding-left: 30px;
 }
 
-.latest-news-info-title {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.latest-news-info-date {
-    font-size: 14px;
-}
-
-.latest-news-info-description {
-    font-size: 16px;
-}
 #paging {
     list-style: none;
     padding-top: 40px !important;
@@ -1699,30 +1668,27 @@ input:focus {
 }
 
 #paging li a {
-    font-size: 14px;
-    font-weight: 500;
     text-decoration: none;
-    color: #5e5e5e;
     padding: 10px 16px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray200);
     transition: background-color 0.3s, color 0.3s;
 }
 
 #paging li a:hover, #paging li a:focus {
-    background-color: #25AAE2;
-    color: white;
+    background-color: var(--simgBlue);
+    color: var(--white);
 }
 
 #paging li a.current {
-    background-color: #25AAE2;
+    background-color: var(--simgBlue);
     color: white;
-    border-color: #007BFF;
+    border-color: var(--simgIndigo);
 }
 
 /* Award Certificate Page */
 
 .award-certificate-container {
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 20px;
 }
 
@@ -1760,7 +1726,7 @@ input:focus {
 /* Our Clients Page */
 
 .our-clients-container {
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 20px;
 }
 
@@ -1809,9 +1775,9 @@ input:focus {
     display: flex;
 }
 
-.product-info-title {
-    font-size: 32px;
-    font-weight: bold;
+.product-info-model,
+.product-info-feature {
+    padding-top: 30px;
 }
 
 .product-info-model-list {
@@ -1819,22 +1785,15 @@ input:focus {
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
-
 }
 
 .product-info-model-title,
 .product-info-feature-title {
     padding-left: 10px;
-    /* padding-top: 40px; */
     padding-bottom: 10px;
-    text-align: left;
-    font-size: 26px;
-    font-weight: bold;
-    color: var(--black);
 }
 
 .product-info-model-item {
-    text-align: left;
     border: 4px solid var(--white);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     padding: 20px 30px;
@@ -1847,17 +1806,6 @@ input:focus {
 .product-info-model-item.active .product-info-model-item-title,
 .product-info-model-item.active .product-info-model-item-subTitle {
     color: var(--simgIndigo);
-    font-weight: bold;
-}
-
-.product-info-model-item-title {
-    font-size: 20px;
-    color: var(--gray400);
-}
-
-.product-info-model-item-subTitle {
-    font-size: 10px;
-    color: var(--gray400);
 }
 
 .product-info-area {
@@ -1865,26 +1813,26 @@ input:focus {
 }
 
 .product-info-feature-contents {
-    text-align: left;
-    font-size: 14px;
     padding-left: 30px;
 }
 
 .product-info-feature-contents li {
     list-style:disc;
+    padding-bottom: 4px;
 }
 
 .product-info-reference {
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 .product-info-reference-button {
-    padding: 8px 50px;
+    padding: 10px 50px;
     border-radius: 10px;
     border: none;
-    background-color: var(--gray100);
-    color: var(--black);
-    font-size: 16px;
+}
+
+.product-info-reference-button:hover {
+    background-color: var(--gray200);
 }
 
 .product-image-area {
@@ -1913,8 +1861,7 @@ input:focus {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,var(--simgOpacity40));
 }
 
 .popup-container {
@@ -1968,13 +1915,10 @@ input:focus {
 }
 
 #inquiryButton {
-   position: relative;
-   top: 40px;
+    position: relative;
+    top: 40px;
     padding: 10px 60px;
-    font-size: 16px;
     cursor: pointer;
-    background-color: var(--simgBlue);
-    color: white;
     border: none;
     border-radius: 10px;
 }
@@ -1982,14 +1926,13 @@ input:focus {
 /* Business Page */
 
 .contact-menu-container {
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 100px;
 }
 
 /* Partnership Page */
 
 .partnership-page-container {
-    /* max-width: 1400px; */
     overflow: visible;
     text-align: center;
     align-items: center;
@@ -1998,33 +1941,26 @@ input:focus {
 }
 
 .partnership-page-title {
-    padding-top: 70px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left;
+    padding-top: 70px !important;
 }
 
 .partnership-page-message {
     padding-bottom: 40px;
-    padding-right: 155px;
-    font-size: 18px;
-    color: #141A37;
-    text-align: left;
+    padding-right: 40px;
     white-space: pre-line
 }
 
 .partnership-page-image {
     width: 100% !important;
-    border-radius: 10px;
     display: block;
     align-content: center;
 }
 
 .partnership-products-container {
-    background-color: var(--gray100);
     padding-top: 40px;
     padding-bottom: 60px;
 }
+
 .partnership-products-list {
     width: 100%;
     border-collapse: collapse;
@@ -2039,36 +1975,28 @@ input:focus {
 
 .partnership-products-item {
     width: 100%;
-    height: 440px;
-    text-align: left;
-    background-color: var(--white);
+    height: 380px;
     border: 1px solid var(--gray200);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+
 .partnership-products-item img{
     width: 100%;
 }
+
 .partnership-products-item-type {
     padding-top: 30px;
     padding-left: 30px;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--simgTangerine);
 }
 
 .partnership-products-item-title {
     padding-top: 4px;
     padding-left: 30px;
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--black);
 }
 
 .partnership-products-item-content {
     height: 80px;
-    padding: 4px 30px 30px 50px;
-    font-size: 14px;
-    color: var(--gray500);
+    padding: 4px 20px 30px 36px;
 }
 
 .partnership-products-item-content li {
@@ -2076,7 +2004,6 @@ input:focus {
 }
 
 .partnership-products-button-area {
-    
     padding-top: 40px;
     margin: auto;
     display: flex;
@@ -2086,12 +2013,52 @@ input:focus {
 }
 
 .partnership-page-contact-button {
-    /* width: 20%; */
-    font-size: 20px;
     display: block;
-    background: linear-gradient(to right, #25aae2, #2d5fab);
-    color: #fff;
-    padding: 18px 32px 15px 32px;
+    padding: 18px 40px 15px 40px;
     text-decoration: none;
-    text-align: center;
+}
+
+.partnership-page-contact-button:hover {
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--simgIndigo);
+}
+
+/* detail news */
+
+.latest-news-detail-container {
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.latest-news-detail-content {
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    width: 100%;
+}
+
+.detail-news-title {
+    padding-top: 20px;
+    padding-bottom: 6px;
+}
+
+.detail-news-upload-date {
+    padding-bottom: 20px;
+}
+
+.detail-news-image-description {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.detail-news-introduce {
+    padding-bottom: 40px;
+}
+
+.detail-news-content-title {
+    padding-bottom: 6px;
+}
+
+.detail-news-content-message {
+    padding-bottom: 40px;
 }
