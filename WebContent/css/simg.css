@@ -650,7 +650,7 @@
 
     .news-wrapper,
     .client-wrapper {
-        width: 80% !important;
+        width: 100% !important;
     }
 
     .news-item {
@@ -1096,7 +1096,7 @@
     display: none;
     position: absolute;
     top: -10px;
-    left: 106%;
+    left: 100%;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1300 !important;
 }
@@ -1182,11 +1182,11 @@
 
 .menu-detail-button {
     display: block;
-    padding: 18px 32px 15px 32px;
+    padding: 15px 32px 0px 32px;
     text-decoration: none;
     position: absolute;
-    top: 18px;
-    bottom: 18px;
+    top: 15px;
+    bottom: 30px;
     right: 40px;
 }
 
@@ -1214,7 +1214,7 @@
 }
 
 .partnership-type {
-    width: 120px;
+    width: 180px;
     font-size: 22px;
     font-weight: 600;
     padding: 6px 0px 4px 10px;
@@ -1297,7 +1297,12 @@
 }
 
 .news-item {
-    width: calc(25% - 20px);
+    width: 25%;
+    /* flex: 0 0 calc(25% - 20px); */
+    
+    /* border: 1px solid #ddd; */
+    /* margin: 0 10px; */
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     transition: transform 0.5s ease;
     flex-shrink: 0; 
@@ -1350,7 +1355,7 @@
 }
 .client-logo {
     flex: 0 0 calc(20% - 20px);
-    padding: 0 10px;
+    margin-right: 20px;
     overflow: hidden;
     transition: transform 0.5s ease;
     flex-shrink: 0;
