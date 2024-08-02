@@ -615,7 +615,7 @@
         width: 100% !important;
         margin-bottom: 40px;
         position: relative;
-        min-height: 540px !important;
+        min-height: 640px !important;
         clear: both;
     }
 
@@ -709,7 +709,7 @@
     }
 
     .footer-container {
-        height: 660px !important;
+        height: 760px !important;
     }
 
     .footer-sections {
@@ -722,10 +722,10 @@
     }
 
     .footer-subtitle {
-        padding-top: 10px !important;
-        width: 50% !important;
-        margin: 10px auto;
-        text-align: center !important;
+        
+        width: 100% !important;
+       
+        text-align: center ;
     }
 
     .social-icons {
@@ -1980,7 +1980,7 @@ input:focus {
 
 .partnership-products-item {
     width: 100%;
-    height: 380px;
+    height: 420px;
     border: 1px solid var(--gray200);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
