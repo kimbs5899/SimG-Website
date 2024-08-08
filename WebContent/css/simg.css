@@ -75,7 +75,7 @@
     .product-reference-container,
     .latest-news-detail-container {
         margin: 0 0;
-        padding: 0 0px;
+        padding: 0 120px;
         position: relative;
     }
 
@@ -218,7 +218,6 @@
         margin-bottom: 40px;
     }
 
-
     .news-wrapper,
     .client-wrapper {
         width: 100% !important;
@@ -227,7 +226,7 @@
         width: 100%;
         padding: 10px !important;
         margin: 0px !important;
-        flex: 0 0 calc(50% - 10px) !important;
+        flex: 0 0 calc(50%) !important;
     }
 
     .client-logo {
@@ -292,7 +291,7 @@
     }
 
     .footer-container {
-        height: 440px !important;
+        height: 540px !important;
     }
 
     .footer-info-detail-section {
@@ -469,9 +468,6 @@
     .top-bar-container{
         padding:10px !important;
      
-    }
-    .top-bar-info{
-       
     }
 
     .menu-tag {
@@ -956,7 +952,6 @@
 
 .top-bar-container {
     width: 100%;
-    max-width: 1400px;
     display: flex;
     justify-content: right;
 }
@@ -1042,7 +1037,7 @@
     display: block;
     position: relative;
     text-decoration: none !important;
-    padding: 29px 15px;
+    padding: 29px 15px 20px 15px;
 }
 
 .nav-business-area {
@@ -1160,6 +1155,7 @@
 
 .business-button {
     padding: 14px 20px !important;
+    margin-top: 10px;
 }
 
 .business-button:hover {
@@ -1244,7 +1240,7 @@
 }
 
 .partnership-type {
-    width: 180px;
+    width: 70px;
     font-size: 22px;
     font-weight: 600;
     padding: 6px 0px 4px 10px;
@@ -1328,10 +1324,6 @@
 
 .news-item {
     width: calc(25% - 20px);
-    /* flex: 0 0 calc(25% - 20px); */
-    /* border: 1px solid #ddd; */
-    /* margin: 0 10px; */
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     transition: transform 0.5s ease;
     flex-shrink: 0; 
@@ -1412,12 +1404,9 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     padding: 40px 40px !important;
 }
-.contact-product-item {
-    width: 50%;
-    margin-left: 20px;
+
+.contact-partner-item:last-child {
     border-top: 4px solid var(--simgBlue);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    padding: 40px 40px !important;
 }
 
 .contact-item-title {
@@ -1462,7 +1451,7 @@ input:focus {
 /* Footer */
 
 .footer-container {
-    min-height: 350px;
+    height: 400px;
 }
 
 .footer-sections {
@@ -1477,7 +1466,7 @@ input:focus {
 }
 
 .footer-info-detail-section {
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content:space-around
 }
