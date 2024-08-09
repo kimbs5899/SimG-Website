@@ -922,6 +922,13 @@
         height: 24px;
     }
     
+    .award-certificate-list {
+        justify-items: center;
+    }   
+
+    .award-certificate-item {
+        width: 240px !important;
+    }
 }
  
 /* Header */
