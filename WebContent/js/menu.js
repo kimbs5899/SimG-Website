@@ -2,29 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // Slide Property
     const newsCarousel = document.querySelector('.news-carousel');
     const newsItems = document.querySelectorAll('.news-item');
-    const clientCarousel = document.querySelector('.client-carousel');
-    const clientItems = document.querySelectorAll('.client-logo');
 
     const newsPrevButton = document.getElementById('news-prev-button');
     const newsNextButton = document.getElementById('news-next-button');
-    const clientPrevButton = document.getElementById('client-prev-button');
-    const clientNextButton = document.getElementById('client-next-button');
 
     let currentIndex = 0;
     let visibleNewsItemCount = 4;
-    let visibleClientItemCount = 5;
 
     const updateCarousel = () => {
         const width = window.innerWidth;
         if (width >= 1400) {
             visibleNewsItemCount = 4;
-            visibleClientItemCount = 5;
         } else if (width > 600) {
             visibleNewsItemCount = 2;
-            visibleClientItemCount = 3;
         } else {
             visibleNewsItemCount = 1;
-            visibleClientItemCount = 1;
         }
 
         if (newsItems.length > 0) {
@@ -37,17 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             newsCarousel.style.transform = "translateX(" + -newsItemWidth * currentIndex + "px)";
         }
-
-        if (clientItems.length > 0) {
-            const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
-            clientCarousel.style.width = (clientItemWidth * clientItems.length) + "px";
-
-            if (currentIndex >= clientItems.length - visibleClientItemCount) {
-                currentIndex = Math.max(0, clientItems.length - visibleClientItemCount);
-            }
-
-            clientCarousel.style.transform = "translateX(" + -clientItemWidth * currentIndex + "px)";
-        }
     };
 
     const gotoNewsSlide = (index) => {
@@ -55,15 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const newsItemWidth = newsItems[0].offsetWidth + parseInt(getComputedStyle(newsItems[0]).marginRight);
             newsCarousel.style.transition = "all 400ms";
             newsCarousel.style.transform = "translateX(" + -newsItemWidth * index + "px)";
-            currentIndex = index;
-        }
-    };
-
-    const gotoClientSlide = (index) => {
-        if (clientItems.length > 0) {
-            const clientItemWidth = clientItems[0].offsetWidth + parseInt(getComputedStyle(clientItems[0]).marginRight);
-            clientCarousel.style.transition = "all 400ms";
-            clientCarousel.style.transform = "translateX(" + -clientItemWidth * index + "px)";
             currentIndex = index;
         }
     };
@@ -191,24 +163,6 @@ document.addEventListener('DOMContentLoaded', function () {
             currentIndex = 0;
         }
         gotoNewsSlide(currentIndex);
-    });
-
-    if (clientPrevButton) clientPrevButton.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = Math.max(0, clientItems.length - visibleClientItemCount);
-        }
-        gotoClientSlide(currentIndex);
-    });
-
-    if (clientNextButton) clientNextButton.addEventListener("click", () => {
-        if (currentIndex < clientItems.length - visibleClientItemCount) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        gotoClientSlide(currentIndex);
     });
 
     window.addEventListener('resize', updateCarousel);
